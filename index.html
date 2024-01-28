@@ -7,19 +7,16 @@
     <style>
         body {
             font-family: Arial, sans-serif;
-            background-color: #f4f4f4;
+            background-color: #f9f9f9;
             margin: 0;
             padding: 0;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
         }
 
         .container {
             max-width: 600px;
+            margin: 50px auto;
             padding: 20px;
-            background-color: #fff;
+            background-color: #ffffff;
             border-radius: 8px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
             text-align: center;
@@ -27,13 +24,14 @@
 
         h1 {
             color: #333;
+            margin-bottom: 20px;
         }
 
         select {
             padding: 10px;
             font-size: 16px;
             border-radius: 5px;
-            border: 1px solid #ddd;
+            border: 1px solid #ccc;
             margin-bottom: 20px;
         }
 
@@ -42,12 +40,22 @@
             height: auto;
             border-radius: 8px;
             box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+        }
+
+        .texto {
+            text-align: left;
+            padding: 20px;
+            background-color: #f9f9f9;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            color: #333;
         }
     </style>
 </head>
 <body>
     <div class="container">
-        <h1>Planilhas - Gestão de Ações de Segurança RJ</h1>
+        <h1>Gestão de Desempenho - Relatório de Ações de Segurança RJ</h1>
         <select id="seletor" onchange="mostrarImagem()">
             <option value="mês.png">Mês</option>
             <option value="loja.png">Loja</option>
@@ -56,10 +64,19 @@
             <option value="fiscal.png">Fiscal</option>
             <option value="setor.png">Setor</option>
             <option value="valor.png">Valor</option>
-            <option value="classificação.png">Classificação</option>
+            <option value="classificacao.png">Classificação</option>
         </select>
-        <br><br>
+        <br>
         <img id="imagem" src="" alt="">
+        
+        <div class="texto">
+            <h2>Coleta dos Dados</h2>
+            <p>Utilizando-se de siglas já pré-determinadas para cada ação cometida através de intervenção do agente ou observação das atitudes do elemento a quem se dirige, foram adotadas as seguintes práticas:</p>
+            <p><strong>F.F (Furto Frustrado):</strong> Onde através da ação do agente, na postura ou observando o elemento, seja ele já conhecido por práticas anteriores ou através de abandono da rés furtiva, dá-se a ação de furto frustrado, por abandono ou casos parecidos.</p>
+            <p><strong>F.C (Furto Consumado):</strong> Onde o elemento subtrai o objeto, deixa o estabelecimento e por ação do agente é abordado diretamente.</p>
+            <p><strong>C.A.P (Consumo Acompanhado Pago):</strong> Onde o cliente degusta de diversos tipos de produtos, sendo observado durante toda a sua permanência no interior da loja, para que não abandone o produto deixando de pagar. Vale salientar que tal prática é costumeira e pode vir a causar grande prejuízo à empresa.</p>
+            <p><strong>A.T.F (Atitude Típica de Furto):</strong> Onde o cliente, seja com intenção ou no costume de utilizar bolsa ecológica, coloca todos os produtos em seu interior, seja dentro da bolsa no interior do carrinho de compras, seja na bolsa pendurada em seu braço ou pela utilização de carrinhos de compras particulares, onde este, quando intencionado a praticar furto, deixa a loja por entre os caixas ou até mesmo pela entrada principal, causando prejuízo enorme à empresa. Desta forma, a prática vem sendo monitorada pelos seguranças, fiscais e a frente de loja.</p>
+        </div>
     </div>
 
     <script>
