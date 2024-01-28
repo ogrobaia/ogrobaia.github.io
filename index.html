@@ -7,7 +7,7 @@
     <style>
         body {
             font-family: Arial, sans-serif;
-            background-color: #f9f9f9;
+            background-color: #f0f7ff; /* Fundo azul claro */
             margin: 0;
             padding: 0;
         }
@@ -17,8 +17,8 @@
             margin: 50px auto;
             padding: 20px;
             background-color: #ffffff;
-            border-radius: 8px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 16px; /* Borda arredondada */
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1); /* Sombra */
             text-align: center;
         }
 
@@ -30,7 +30,7 @@
         select {
             padding: 10px;
             font-size: 16px;
-            border-radius: 5px;
+            border-radius: 8px;
             border: 1px solid #ccc;
             margin-bottom: 20px;
         }
@@ -39,7 +39,7 @@
             max-width: 100%;
             height: auto;
             border-radius: 8px;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
             margin-bottom: 20px;
         }
 
@@ -51,20 +51,50 @@
             box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
             color: #333;
         }
+
+        .rodape {
+            text-align: left;
+            font-size: 14px;
+            margin-top: 20px;
+            padding-top: 20px;
+            border-top: 1px solid #ccc;
+        }
+
+        .rodape a {
+            color: #333;
+            text-decoration: none;
+            margin-right: 10px;
+        }
+
+        .links-superiores {
+            margin-bottom: 20px;
+        }
+
+        .links-superiores a {
+            color: #333;
+            text-decoration: none;
+            margin-right: 20px;
+        }
     </style>
 </head>
 <body>
     <div class="container">
+        <div class="links-superiores">
+            <a href="https://www.nagumo.com.br/">Site Nagumo</a>
+            <a href="https://www.youtube.com/c/SupermercadosNagumo">Canal do Youtube</a>
+            <a href="https://www.instagram.com/supermercados_nagumo/p/C2f1MQCJ8eq/?img_index=1">Instagram</a>
+        </div>
+
         <h1>Gestão de Desempenho - Relatório de Ações de Segurança RJ</h1>
         <select id="seletor" onchange="mostrarImagem()">
-            <option value="mês.png">Mês</option>
+            <option value="mes.png">Mês</option>
             <option value="loja.png">Loja</option>
             <option value="turno.png">Turno</option>
             <option value="vigilante.png">Vigilante</option>
             <option value="fiscal.png">Fiscal</option>
             <option value="setor.png">Setor</option>
             <option value="valor.png">Valor</option>
-            <option value="classificação.png">Classificação</option>
+            <option value="classificacao.png">Classificação</option>
         </select>
         <br>
         <img id="imagem" src="" alt="">
@@ -76,6 +106,14 @@
             <p><strong>F.C (Furto Consumado):</strong> Onde o elemento subtrai o objeto, deixa o estabelecimento e por ação do agente é abordado diretamente.</p>
             <p><strong>C.A.P (Consumo Acompanhado Pago):</strong> Onde o cliente degusta de diversos tipos de produtos, sendo observado durante toda a sua permanência no interior da loja, para que não abandone o produto deixando de pagar. Vale salientar que tal prática é costumeira e pode vir a causar grande prejuízo à empresa.</p>
             <p><strong>A.T.F (Atitude Típica de Furto):</strong> Onde o cliente, seja com intenção ou no costume de utilizar bolsa ecológica, coloca todos os produtos em seu interior, seja dentro da bolsa no interior do carrinho de compras, seja na bolsa pendurada em seu braço ou pela utilização de carrinhos de compras particulares, onde este, quando intencionado a praticar furto, deixa a loja por entre os caixas ou até mesmo pela entrada principal, causando prejuízo enorme à empresa. Desta forma, a prática vem sendo monitorada pelos seguranças, fiscais e a frente de loja.</p>
+        </div>
+
+        <div class="rodape">
+            <p><strong>Supervisor:</strong> Claudio</p>
+            <p><strong>Gerente de perdas:</strong> Emerson Carriero</p>
+            <p><strong>Gerente Loja 36:</strong> Miranda</p>
+            <p><strong>Gerente Loja 53:</strong> Henrique</p>
+            <p><strong>Gestor de Perdas:</strong> Daniel</p>
         </div>
     </div>
 
