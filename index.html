@@ -4,6 +4,64 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Exibir Imagens PNG</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .container {
+            max-width: 600px;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        h1 {
+            color: #333;
+        }
+
+        select {
+            padding: 10px;
+            font-size: 16px;
+            border-radius: 5px;
+            border: 1px solid #ddd;
+            margin-bottom: 20px;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Resultados - Gestão de Ações de Segurança RJ</h1>
+        <select id="seletor" onchange="mostrarImagem()">
+            <option value="mês.png">Mês</option>
+            <option value="loja.png">Loja</option>
+            <option value="turno.png">Turno</option>
+            <option value="vigilante.png">Vigilante</option>
+            <option value="fiscal.png">Fiscal</option>
+            <option value="setor.png">Setor</option>
+            <option value="valor.png">Valor</option>
+            <option value="classificação.png">Classificação</option>
+        </select>
+        <br><br>
+        <img id="imagem" src="" alt="">
+    </div>
+
     <script>
         function mostrarImagem() {
             var select = document.getElementById("seletor");
@@ -11,20 +69,5 @@
             document.getElementById("imagem").src = "/static/" + imagemSelecionada;
         }
     </script>
-</head>
-<body>
-    <h1>Selecione uma imagem:</h1>
-    <select id="seletor" onchange="mostrarImagem()">
-        <option value="mês.png">Mês</option>
-        <option value="loja.png">Loja</option>
-        <option value="turno.png">Turno</option>
-        <option value="vigilante.png">Vigilante</option>
-        <option value="fiscal.png">Fiscal</option>
-        <option value="setor.png">Setor</option>
-        <option value="valor.png">Valor</option>
-        <option value="classificação.png">Classificação</option>
-    </select>
-    <br><br>
-    <img id="imagem" src="" alt="Imagem Selecionada" style="max-width: 500px;">
 </body>
 </html>
