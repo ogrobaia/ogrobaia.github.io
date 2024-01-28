@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exibir Imagens PNG</title>
+    <script>
+        function mostrarImagem() {
+            var select = document.getElementById("seletor");
+            var imagemSelecionada = select.options[select.selectedIndex].value;
+            document.getElementById("imagem").src = "/static/" + imagemSelecionada;
+        }
+    </script>
+</head>
+<body>
+    <h1>Selecione uma imagem:</h1>
+    <select id="seletor" onchange="mostrarImagem()">
+        <option value="mês.png">Mês</option>
+        <option value="loja.png">Loja</option>
+        <option value="turno.png">Turno</option>
+        <option value="vigilante.png">Vigilante</option>
+        <option value="fiscal.png">Fiscal</option>
+        <option value="setor.png">Setor</option>
+        <option value="valor.png">Valor</option>
+        <option value="classificação.png">Classificação</option>
+    </select>
+    <br><br>
+    <img id="imagem" src="" alt="Imagem Selecionada" style="max-width: 500px;">
+</body>
+</html>
