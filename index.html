@@ -13,13 +13,14 @@
         }
 
         .container {
-            max-width: 90%; 
+            width: 90%; 
             margin: 50px auto;
             padding: 20px;
             background-color: #ffffff;
             border-radius: 16px;
             box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
             text-align: left;
+            overflow: hidden; /* Para ajustar ao tamanho da imagem */
         }
 
         img {
@@ -29,6 +30,7 @@
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
             margin-bottom: 20px;
             transition: opacity 0.5s ease;
+            display: block; /* Remover espaços em branco abaixo da imagem */
         }
 
         img:hover {
@@ -41,9 +43,10 @@
 
         /* Estilos para o dropdown */
         select {
-            width: 200px; /* Ajuste conforme necessário */
-            font-size: 16px; /* Ajuste conforme necessário */
-            padding: 10px; /* Ajuste conforme necessário */
+            width: 100%; /* Ocupar toda a largura do container */
+            font-size: 16px;
+            padding: 10px;
+            margin-bottom: 10px; /* Adicionado espaço abaixo do dropdown */
         }
 
         @media screen and (max-width: 600px) {
