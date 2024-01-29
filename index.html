@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Exibir Imagens PNG e Incorporar Formulário</title>
+    <title>Exibir Gráficos e Incorporar Formulário</title>
     <style>
         body {
             background-color: #f0f7ff;
@@ -39,6 +39,13 @@
             margin-top: 20px;
         }
 
+        /* Estilos para o dropdown */
+        select {
+            width: 200px; /* Ajuste conforme necessário */
+            font-size: 16px; /* Ajuste conforme necessário */
+            padding: 10px; /* Ajuste conforme necessário */
+        }
+
         @media screen and (max-width: 600px) {
             .container {
                 width: 95%;
@@ -56,27 +63,23 @@
         </div>
 
         <h1>Gestão de Desempenho - Relatório de Ações de Segurança RJ</h1>
-        <select id="seletor" onchange="mostrarImagem()">
-            <option value="mês.png">Mês</option>
-            <option value="loja.png">Loja</option>
-            <option value="turno.png">Turno</option>
-            <option value="vigilante.png">Vigilante</option>
-            <option value="fiscal.png">Fiscal</option>
-            <option value="setor.png">Setor</option>
-            <option value="valor.png">Valor</option>
-            <option value="classificação.png">Classificação</option>
+        <select id="seletor" onchange="mostrarGrafico()">
+            <option value="https://docs.google.com/spreadsheets/d/e/2PACX-1vRwLhUU91HJTLP2jwfLkJ1sD8lrhpkVwy8Ea8hEYOx4VCDU5BamiCk0FEawL8gEMN3OFrEyNPTYHvfD/pubchart?oid=1460629283&amp;format=interactive">Mês</option>
+            <option value="https://docs.google.com/spreadsheets/d/e/2PACX-1vRwLhUU91HJTLP2jwfLkJ1sD8lrhpkVwy8Ea8hEYOx4VCDU5BamiCk0FEawL8gEMN3OFrEyNPTYHvfD/pubchart?oid=1643534116&amp;format=interactive">Loja</option>
+            <option value="https://docs.google.com/spreadsheets/d/e/2PACX-1vRwLhUU91HJTLP2jwfLkJ1sD8lrhpkVwy8Ea8hEYOx4VCDU5BamiCk0FEawL8gEMN3OFrEyNPTYHvfD/pubchart?oid=393890253&amp;format=interactive">Turno</option>
+            <option value="https://docs.google.com/spreadsheets/d/e/2PACX-1vRwLhUU91HJTLP2jwfLkJ1sD8lrhpkVwy8Ea8hEYOx4VCDU5BamiCk0FEawL8gEMN3OFrEyNPTYHvfD/pubchart?oid=693678060&amp;format=interactive">Vigilante</option>
+            <option value="https://docs.google.com/spreadsheets/d/e/2PACX-1vRwLhUU91HJTLP2jwfLkJ1sD8lrhpkVwy8Ea8hEYOx4VCDU5BamiCk0FEawL8gEMN3OFrEyNPTYHvfD/pubchart?oid=599875144&amp;format=interactive">Fiscal</option>
+            <option value="https://docs.google.com/spreadsheets/d/e/2PACX-1vRwLhUU91HJTLP2jwfLkJ1sD8lrhpkVwy8Ea8hEYOx4VCDU5BamiCk0FEawL8gEMN3OFrEyNPTYHvfD/pubchart?oid=1836405538&amp;format=interactive">Setor</option>
+            <option value="https://docs.google.com/spreadsheets/d/e/2PACX-1vRwLhUU91HJTLP2jwfLkJ1sD8lrhpkVwy8Ea8hEYOx4VCDU5BamiCk0FEawL8gEMN3OFrEyNPTYHvfD/pubchart?oid=1182070057&amp;format=interactive">Valor</option>
+            <option value="https://docs.google.com/spreadsheets/d/e/2PACX-1vRwLhUU91HJTLP2jwfLkJ1sD8lrhpkVwy8Ea8hEYOx4VCDU5BamiCk0FEawL8gEMN3OFrEyNPTYHvfD/pubchart?oid=391302009&amp;format=interactive">Classificação</option>
         </select>
         <br>
         <img id="imagem" src="" alt="">
 
-         <!-- Incorporação do gráfico -->
-         <iframe width="100%" height="371" seamless frameborder="0" scrolling="no" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vRwLhUU91HJTLP2jwfLkJ1sD8lrhpkVwy8Ea8hEYOx4VCDU5BamiCk0FEawL8gEMN3OFrEyNPTYHvfD/pubchart?oid=1643534116&amp;format=interactive"></iframe>
-         <iframe width="100%" height="371" seamless frameborder="0" scrolling="no" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vRwLhUU91HJTLP2jwfLkJ1sD8lrhpkVwy8Ea8hEYOx4VCDU5BamiCk0FEawL8gEMN3OFrEyNPTYHvfD/pubchart?oid=693678060&amp;format=interactive"></iframe>
-         <iframe width="100%" height="371" seamless frameborder="0" scrolling="no" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vRwLhUU91HJTLP2jwfLkJ1sD8lrhpkVwy8Ea8hEYOx4VCDU5BamiCk0FEawL8gEMN3OFrEyNPTYHvfD/pubchart?oid=599875144&amp;format=interactive"></iframe>
-         <iframe width="100%" height="371" seamless frameborder="0" scrolling="no" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vRwLhUU91HJTLP2jwfLkJ1sD8lrhpkVwy8Ea8hEYOx4VCDU5BamiCk0FEawL8gEMN3OFrEyNPTYHvfD/pubchart?oid=1836405538&amp;format=interactive"></iframe>
-         <iframe width="100%" height="371" seamless frameborder="0" scrolling="no" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vRwLhUU91HJTLP2jwfLkJ1sD8lrhpkVwy8Ea8hEYOx4VCDU5BamiCk0FEawL8gEMN3OFrEyNPTYHvfD/pubchart?oid=391302009&amp;format=interactive"></iframe>
+        <!-- Div para exibir o gráfico selecionado -->
+        <iframe id="grafico" width="100%" height="371" seamless frameborder="0" scrolling="no"></iframe>
          
-         <div class="texto">
+        <div class="texto">
             <h2>Coleta dos Dados</h2>
             <p>Utilizando-se de siglas já pré-determinadas para cada ação cometida através de intervenção do agente ou observação das atitudes do elemento a quem se dirige, foram adotadas as seguintes práticas:</p>
             <p><strong>F.F (Furto Frustrado):</strong> Onde através da ação do agente, na postura ou observando o elemento, seja ele já conhecido por práticas anteriores ou através de abandono da rés furtiva, dá-se a ação de furto frustrado, por abandono ou casos parecidos.</p>
@@ -101,10 +104,10 @@
     </div>
 
     <script>
-        function mostrarImagem() {
+        function mostrarGrafico() {
             var select = document.getElementById("seletor");
-            var imagemSelecionada = select.options[select.selectedIndex].value;
-            document.getElementById("imagem").src = "/static/" + imagemSelecionada;
+            var graficoSelecionado = select.options[select.selectedIndex].value;
+            document.getElementById("grafico").src = graficoSelecionado;
         }
     </script>
 </body>
