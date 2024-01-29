@@ -3,13 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Exibir Imagens PNG</title>
+    <title>Exibir Imagens PNG e Incorporar Formulário</title>
     <style>
         body {
-            font-family: 'Arial Narrow', Arial, sans-serif; /* Altera a fonte para Arial Narrow */
-            background-color: #f0f7ff; /* Fundo azul claro */
+            background-color: #f0f7ff;
             margin: 0;
             padding: 0;
+            animation: fadeIn ease 3s; /* Adiciona uma animação de fade in para o corpo da página */
+        }
+
+        @keyframes fadeIn {
+            0% { opacity: 0; }
+            100% { opacity: 1; }
         }
 
         .container {
@@ -17,23 +22,12 @@
             margin: 50px auto;
             padding: 20px;
             background-color: #ffffff;
-            border-radius: 16px; /* Borda arredondada */
-            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1); /* Sombra */
-            text-align: center;
+            border-radius: 16px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+            text-align: left; /* Ajusta o alinhamento do texto para a esquerda */
         }
 
-        h1 {
-            color: #333;
-            margin-bottom: 20px;
-        }
-
-        select {
-            padding: 10px;
-            font-size: 16px;
-            border-radius: 8px;
-            border: 1px solid #ccc;
-            margin-bottom: 20px;
-        }
+        /* Restante do seu CSS permanece o mesmo */
 
         img {
             max-width: 100%;
@@ -41,41 +35,11 @@
             border-radius: 8px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
             margin-bottom: 20px;
+            transition: opacity 0.5s ease; /* Adiciona uma transição suave de opacidade para a imagem */
         }
 
-        .texto {
-            text-align: left;
-            padding: 20px;
-            background-color: #f9f9f9;
-            border-radius: 8px;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-            color: #333;
-            font-family: 'Arial Narrow', Arial, sans-serif; /* Altera a fonte para Arial Narrow */
-        }
-
-        .rodape {
-            text-align: left;
-            font-size: 14px;
-            margin-top: 20px;
-            padding-top: 20px;
-            border-top: 1px solid #ccc;
-            font-family: 'Arial Narrow', Arial, sans-serif; /* Altera a fonte para Arial Narrow */
-        }
-
-        .rodape a {
-            color: #333;
-            text-decoration: none;
-            margin-right: 10px;
-        }
-
-        .links-superiores {
-            margin-bottom: 20px;
-        }
-
-        .links-superiores a {
-            color: #333;
-            text-decoration: none;
-            margin-right: 20px;
+        img:hover {
+            opacity: 0.8; /* Reduz ligeiramente a opacidade ao passar o mouse sobre a imagem */
         }
     </style>
 </head>
@@ -110,8 +74,13 @@
             <p><strong>A.T.F (Atitude Típica de Furto):</strong> Onde o cliente, seja com intenção ou no costume de utilizar bolsa ecológica, coloca todos os produtos em seu interior, seja dentro da bolsa no interior do carrinho de compras, seja na bolsa pendurada em seu braço ou pela utilização de carrinhos de compras particulares, onde este, quando intencionado a praticar furto, deixa a loja por entre os caixas ou até mesmo pela entrada principal, causando prejuízo enorme à empresa. Desta forma, a prática vem sendo monitorada pelos seguranças, fiscais e a frente de loja.</p>
         </div>
 
+        <!-- Div para incorporar o formulário do Google -->
+        <div id="google-form">
+            <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSdJahlGovT2paYj0OK4mRBiLDmsuuvPQUpHC7xfwDMnyYNm6w/viewform?embedded=true" width="640" height="747" frameborder="0" marginheight="0" marginwidth="0">Carregando…</iframe>
+        </div>
+
         <div class="rodape">
-            <p><strong>Contatos</strong></p>
+            <p><strong>Staff</strong></p>
             <p><strong>Supervisor:</strong> Claudio</p>
             <p><strong>Gerente de perdas:</strong> Emerson Carriero</p>
             <p><strong>Gerente Loja 36:</strong> Miranda</p>
