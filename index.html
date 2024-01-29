@@ -12,15 +12,31 @@
             font-family: Arial, sans-serif;
         }
 
+        #logo {
+            width: 100px; /* Ajuste conforme necessário */
+            height: auto;
+            margin: 20px; /* Espaçamento em torno da imagem */
+            animation: destacarLogo 3s infinite alternate; /* Animação para destacar o logo */
+        }
+
+        /* Definição da animação para destacar o logo */
+        @keyframes destacarLogo {
+            0% {
+                transform: scale(1);
+            }
+            100% {
+                transform: scale(1.2);
+            }
+        }
+
         .container {
-            width: 90%; 
-            margin: 50px auto;
+            max-width: 90%; 
+            margin: 0 auto;
             padding: 20px;
             background-color: #ffffff;
             border-radius: 16px;
             box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
             text-align: left;
-            overflow: hidden; /* Para ajustar ao tamanho da imagem */
         }
 
         img {
@@ -30,7 +46,6 @@
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
             margin-bottom: 20px;
             transition: opacity 0.5s ease;
-            display: block; /* Remover espaços em branco abaixo da imagem */
         }
 
         img:hover {
@@ -43,10 +58,9 @@
 
         /* Estilos para o dropdown */
         select {
-            width: 100%; /* Ocupar toda a largura do container */
-            font-size: 16px;
-            padding: 10px;
-            margin-bottom: 10px; /* Adicionado espaço abaixo do dropdown */
+            width: 200px; /* Ajuste conforme necessário */
+            font-size: 16px; /* Ajuste conforme necessário */
+            padding: 10px; /* Ajuste conforme necessário */
         }
 
         @media screen and (max-width: 600px) {
@@ -58,6 +72,8 @@
     </style>
 </head>
 <body>
+    <img id="logo" src="https://img.freepik.com/vetores-premium/gire-o-icone-do-smartphone-no-fundo-branco-simbolo-de-rotacao-do-dispositivo-ilustracao-em-vetor-linha_476325-19.jpg" alt="Logo">
+
     <div class="container">
         <div class="links-superiores">
             <a href="https://www.nagumo.com.br/">Site Nagumo</a>
@@ -67,6 +83,7 @@
 
         <h1>Gestão de Desempenho - Relatório de Ações de Segurança RJ</h1>
         <select id="seletor" onchange="mostrarGrafico()">
+            <option value="https://docs.google.com/spreadsheets/d/e/2PACX-1vRwLhUU91HJTLP2jwfLkJ1sD8lrhpkVwy8Ea8hEYOx4VCDU5BamiCk0FEawL8gEMN3OFrEyNPTYHvfD/pubchart?oid=500388460&amp;format=interactive">Data</option>
             <option value="https://docs.google.com/spreadsheets/d/e/2PACX-1vRwLhUU91HJTLP2jwfLkJ1sD8lrhpkVwy8Ea8hEYOx4VCDU5BamiCk0FEawL8gEMN3OFrEyNPTYHvfD/pubchart?oid=1460629283&amp;format=interactive">Mês</option>
             <option value="https://docs.google.com/spreadsheets/d/e/2PACX-1vRwLhUU91HJTLP2jwfLkJ1sD8lrhpkVwy8Ea8hEYOx4VCDU5BamiCk0FEawL8gEMN3OFrEyNPTYHvfD/pubchart?oid=1643534116&amp;format=interactive">Loja</option>
             <option value="https://docs.google.com/spreadsheets/d/e/2PACX-1vRwLhUU91HJTLP2jwfLkJ1sD8lrhpkVwy8Ea8hEYOx4VCDU5BamiCk0FEawL8gEMN3OFrEyNPTYHvfD/pubchart?oid=393890253&amp;format=interactive">Turno</option>
