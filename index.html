@@ -9,22 +9,17 @@
             background-color: #f0f7ff;
             margin: 0;
             padding: 0;
-            animation: fadeIn ease 3s; /* Adiciona uma animação de fade in para o corpo da página */
-        }
-
-        @keyframes fadeIn {
-            0% { opacity: 0; }
-            100% { opacity: 1; }
+            font-family: Arial, sans-serif; /* Alterada a fonte para uma fonte mais padrão */
         }
 
         .container {
-            max-width: 600px;
+            max-width: 90%; /* Ajusta a largura máxima para 90% da largura da tela */
             margin: 50px auto;
             padding: 20px;
             background-color: #ffffff;
             border-radius: 16px;
             box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
-            text-align: left; /* Ajusta o alinhamento do texto para a esquerda */
+            text-align: left;
         }
 
         /* Restante do seu CSS permanece o mesmo */
@@ -35,11 +30,21 @@
             border-radius: 8px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
             margin-bottom: 20px;
-            transition: opacity 0.5s ease; /* Adiciona uma transição suave de opacidade para a imagem */
+            transition: opacity 0.5s ease;
         }
 
         img:hover {
-            opacity: 0.8; /* Reduz ligeiramente a opacidade ao passar o mouse sobre a imagem */
+            opacity: 0.8;
+        }
+
+        @media screen and (max-width: 600px) {
+            /* Aplica estilos específicos quando a largura da tela for 600px ou menos */
+            .container {
+                padding: 10px;
+            }
+            img {
+                margin-bottom: 10px;
+            }
         }
     </style>
 </head>
@@ -76,7 +81,7 @@
 
         <!-- Div para incorporar o formulário do Google -->
         <div id="google-form">
-            <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSdJahlGovT2paYj0OK4mRBiLDmsuuvPQUpHC7xfwDMnyYNm6w/viewform?embedded=true" width="640" height="747" frameborder="0" marginheight="0" marginwidth="0">Carregando…</iframe>
+            <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSdJahlGovT2paYj0OK4mRBiLDmsuuvPQUpHC7xfwDMnyYNm6w/viewform?embedded=true" width="100%" height="747" frameborder="0" marginheight="0" marginwidth="0">Carregando…</iframe>
         </div>
 
         <div class="rodape">
