@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Exibir Gráficos e Incorporar Formulário</title>
+    <title></title>
     <style>
         body {
             background-color: #f0f7ff;
@@ -13,13 +13,12 @@
         }
 
         #logo {
-            width: 100px; /* Ajuste conforme necessário */
+            width: 100px;
             height: auto;
-            margin: 20px; /* Espaçamento em torno da imagem */
-            animation: destacarLogo 3s infinite alternate; /* Animação para destacar o logo */
+            margin: 20px;
+            animation: destacarLogo 3s infinite alternate;
         }
 
-        /* Definição da animação para destacar o logo */
         @keyframes destacarLogo {
             0% {
                 transform: scale(1);
@@ -30,27 +29,28 @@
         }
 
         .container {
-            max-width: 90%; 
+            max-width: 90%;
             margin: 0 auto;
             padding: 20px;
             background-color: #ffffff;
             border-radius: 16px;
             box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
             text-align: left;
-            display: flex; /* Para alinhar elementos horizontalmente */
         }
 
         .botoes-laterais {
-            margin-right: 20px; /* Espaço entre os botões e o conteúdo principal */
-            display: flex; /* Para alinhar os botões verticalmente */
-            flex-direction: column; /* Para alinhar os botões verticalmente */
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            margin-bottom: 20px;
         }
 
         .botao {
-            padding: 15px 20px; /* Tamanho do botão */
-            margin-bottom: 10px; /* Espaço entre os botões */
+            flex: 0 1 calc(33.33% - 10px);
+            margin-bottom: 10px;
+            padding: 15px 0;
             font-size: 16px;
-            background-color: #4CAF50; /* Cor do botão */
+            background-color: #4CAF50;
             color: white;
             border: none;
             border-radius: 8px;
@@ -59,39 +59,37 @@
         }
 
         .botao:hover {
-            background-color: #45a049; /* Cor do botão ao passar o mouse */
+            background-color: #45a049;
         }
 
-        img {
-            max-width: 100%;
-            height: auto;
-            border-radius: 8px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            margin-bottom: 20px;
-            transition: opacity 0.5s ease;
-        }
-
-        img:hover {
-            opacity: 0.8;
+        .conteudo-principal {
+            text-align: center;
         }
 
         .texto {
             margin-top: 20px;
+            text-align: justify;
         }
 
-        @media screen and (max-width: 600px) {
-            .container {
-                width: 95%;
-                margin: 20px auto;
-                flex-direction: column; /* Altera para empilhar os elementos em telas pequenas */
-                align-items: center; /* Centraliza os elementos em telas pequenas */
-            }
+        iframe {
+            width: 100%;
+            height: 400px;
+            margin-bottom: 20px;
+        }
 
-            .botoes-laterais {
-                margin-right: 0; /* Remove a margem na direita em telas pequenas */
-                margin-bottom: 20px; /* Adiciona espaço abaixo dos botões em telas pequenas */
-                align-items: center; /* Centraliza os botões em telas pequenas */
-                flex-direction: row; /* Altera para alinhar os botões horizontalmente em telas pequenas */
+        .rodape {
+            text-align: left;
+        }
+
+        @media screen and (max-width: 768px) {
+            .botao {
+                flex-basis: calc(50% - 10px);
+            }
+        }
+
+        @media screen and (max-width: 480px) {
+            .botao {
+                flex-basis: calc(100% - 10px);
             }
         }
     </style>
@@ -100,6 +98,7 @@
     <img id="logo" src="https://img.freepik.com/vetores-premium/gire-o-icone-do-smartphone-no-fundo-branco-simbolo-de-rotacao-do-dispositivo-ilustracao-em-vetor-linha_476325-19.jpg" alt="Logo">
 
     <div class="container">
+        <h1>Gestão de Desempenho - Relatório de Ações de Segurança RJ</h1>
         <div class="botoes-laterais">
             <button class="botao" onclick="toggleGrafico('https://docs.google.com/spreadsheets/d/e/2PACX-1vRwLhUU91HJTLP2jwfLkJ1sD8lrhpkVwy8Ea8hEYOx4VCDU5BamiCk0FEawL8gEMN3OFrEyNPTYHvfD/pubchart?oid=500388460&amp;format=interactive')">Data</button>
             <button class="botao" onclick="toggleGrafico('https://docs.google.com/spreadsheets/d/e/2PACX-1vRwLhUU91HJTLP2jwfLkJ1sD8lrhpkVwy8Ea8hEYOx4VCDU5BamiCk0FEawL8gEMN3OFrEyNPTYHvfD/pubchart?oid=1460629283&amp;format=interactive')">Mês</button>
@@ -110,6 +109,8 @@
             <button class="botao" onclick="toggleGrafico('https://docs.google.com/spreadsheets/d/e/2PACX-1vRwLhUU91HJTLP2jwfLkJ1sD8lrhpkVwy8Ea8hEYOx4VCDU5BamiCk0FEawL8gEMN3OFrEyNPTYHvfD/pubchart?oid=1836405538&amp;format=interactive')">Setor</button>
             <button class="botao" onclick="toggleGrafico('https://docs.google.com/spreadsheets/d/e/2PACX-1vRwLhUU91HJTLP2jwfLkJ1sD8lrhpkVwy8Ea8hEYOx4VCDU5BamiCk0FEawL8gEMN3OFrEyNPTYHvfD/pubchart?oid=1182070057&amp;format=interactive')">Valor</button>
             <button class="botao" onclick="toggleGrafico('https://docs.google.com/spreadsheets/d/e/2PACX-1vRwLhUU91HJTLP2jwfLkJ1sD8lrhpkVwy8Ea8hEYOx4VCDU5BamiCk0FEawL8gEMN3OFrEyNPTYHvfD/pubchart?oid=391302009&amp;format=interactive')">Classificação</button>
+
+            <!-- Adicione os outros botões aqui -->
         </div>
 
         <div class="conteudo-principal">
@@ -122,20 +123,20 @@
                 <p><strong>F.C (Furto Consumado):</strong> Onde o elemento subtrai o objeto, deixa o estabelecimento e por ação do agente é abordado diretamente.</p>
                 <p><strong>C.A.P (Consumo Acompanhado Pago):</strong> Onde o cliente degusta de diversos tipos de produtos, sendo observado durante toda a sua permanência no interior da loja, para que não abandone o produto deixando de pagar. Vale salientar que tal prática é costumeira e pode vir a causar grande prejuízo à empresa.</p>
                 <p><strong>A.T.F (Atitude Típica de Furto):</strong> Onde o cliente, seja com intenção ou no costume de utilizar bolsa ecológica, coloca todos os produtos em seu interior, seja dentro da bolsa no interior do carrinho de compras, seja na bolsa pendurada em seu braço ou pela utilização de carrinhos de compras particulares, onde este, quando intencionado a praticar furto, deixa a loja por entre os caixas ou até mesmo pela entrada principal, causando prejuízo enorme à empresa. Desta forma, a prática vem sendo monitorada pelos seguranças, fiscais e a frente de loja.</p>
-            </div>
+        </div>
             
-            <!-- Div para incorporar o formulário do Google -->
             <div id="google-form">
                 <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSdJahlGovT2paYj0OK4mRBiLDmsuuvPQUpHC7xfwDMnyYNm6w/viewform?embedded=true" width="100%" height="747" frameborder="0" marginheight="0" marginwidth="0">Carregando…</iframe>
             </div>
 
             <div class="rodape">
                 <p><strong>Staff</strong></p>
-                <p><strong>Supervisor:</strong> Claudio</p>
-                <p><strong>Gerente de perdas:</strong> Emerson Carriero</p>
+                <p><strong>Supervisor Regional:</strong> Claudio</p>
+                <p><strong>Supervisor Perdas:</strong> Emerson Carriero</p>
                 <p><strong>Gerente Loja 36:</strong> Miranda</p>
                 <p><strong>Gerente Loja 53:</strong> Henrique</p>
                 <p><strong>Gestor de Perdas:</strong> Daniel</p>
+                <!-- Informações sobre a equipe aqui -->
             </div>
         </div>
     </div>
@@ -166,8 +167,8 @@
             graficosAtivos.forEach(function(url) {
                 var iframe = document.createElement("iframe");
                 iframe.src = url;
-                iframe.width = "370%";
-                iframe.height = "370";
+                iframe.width = "100%";
+                iframe.height = "400";
                 iframe.frameBorder = "0";
                 iframe.scrolling = "no";
                 container.appendChild(iframe);
