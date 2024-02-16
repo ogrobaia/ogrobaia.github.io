@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title></title>
+    <title>Gestão de Desempenho - Relatório de Ações de Segurança RJ</title>
     <style>
         body {
             background-color: #f0f7ff;
@@ -38,15 +38,7 @@
             text-align: left;
         }
 
-        .botoes-laterais {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: space-between;
-            margin-bottom: 20px;
-        }
-
-        .botao {
-            flex: 0 1 calc(33.33% - 10px);
+        .link {
             margin-bottom: 10px;
             padding: 15px 0;
             font-size: 16px;
@@ -56,9 +48,15 @@
             border-radius: 8px;
             cursor: pointer;
             transition: background-color 0.3s;
+            text-align: center;
+            display: block;
+            text-decoration: none;
+            text-align: center;
+            width: fit-content;
+            margin: 10px auto;
         }
 
-        .botao:hover {
+        .link:hover {
             background-color: #45a049;
         }
 
@@ -104,23 +102,13 @@
             <a href="https://www.instagram.com/supermercados_nagumo?igsh=MXFvb3NkanphYmtwOQ==">Instagram</a>
         </div>
 
-    <div class="container">
-        <h1>Gestão de Desempenho - Relatório de Ações de Segurança RJ</h1>
-        <div class="botoes-laterais">
-            <button class="botao" onclick="abrirJanela('https://docs.google.com/spreadsheets/d/e/2PACX-1vRwLhUU91HJTLP2jwfLkJ1sD8lrhpkVwy8Ea8hEYOx4VCDU5BamiCk0FEawL8gEMN3OFrEyNPTYHvfD/pubchart?oid=500388460&amp;format=interactive')">Data</button>
-            <button class="botao" onclick="abrirJanela('https://docs.google.com/spreadsheets/d/e/2PACX-1vRwLhUU91HJTLP2jwfLkJ1sD8lrhpkVwy8Ea8hEYOx4VCDU5BamiCk0FEawL8gEMN3OFrEyNPTYHvfD/pubchart?oid=1460629283&amp;format=interactive')">Mês</button>
-            <button class="botao" onclick="abrirJanela('https://docs.google.com/spreadsheets/d/e/2PACX-1vRwLhUU91HJTLP2jwfLkJ1sD8lrhpkVwy8Ea8hEYOx4VCDU5BamiCk0FEawL8gEMN3OFrEyNPTYHvfD/pubchart?oid=1643534116&amp;format=interactive')">Loja</button>
-            <button class="botao" onclick="abrirJanela('https://docs.google.com/spreadsheets/d/e/2PACX-1vRwLhUU91HJTLP2jwfLkJ1sD8lrhpkVwy8Ea8hEYOx4VCDU5BamiCk0FEawL8gEMN3OFrEyNPTYHvfD/pubchart?oid=393890253&amp;format=interactive')">Turno</button>
-            <button class="botao" onclick="abrirJanela('https://docs.google.com/spreadsheets/d/e/2PACX-1vRwLhUU91HJTLP2jwfLkJ1sD8lrhpkVwy8Ea8hEYOx4VCDU5BamiCk0FEawL8gEMN3OFrEyNPTYHvfD/pubchart?oid=693678060&amp;format=interactive')">Vigilante</button>
-            <button class="botao" onclick="abrirJanela('https://docs.google.com/spreadsheets/d/e/2PACX-1vRwLhUU91HJTLP2jwfLkJ1sD8lrhpkVwy8Ea8hEYOx4VCDU5BamiCk0FEawL8gEMN3OFrEyNPTYHvfD/pubchart?oid=599875144&amp;format=interactive')">Fiscal</button>
-            <button class="botao" onclick="abrirJanela('https://docs.google.com/spreadsheets/d/e/2PACX-1vRwLhUU91HJTLP2jwfLkJ1sD8lrhpkVwy8Ea8hEYOx4VCDU5BamiCk0FEawL8gEMN3OFrEyNPTYHvfD/pubchart?oid=1836405538&amp;format=interactive')">Setor</button>
-            <button class="botao" onclick="abrirJanela('https://docs.google.com/spreadsheets/d/e/2PACX-1vRwLhUU91HJTLP2jwfLkJ1sD8lrhpkVwy8Ea8hEYOx4VCDU5BamiCk0FEawL8gEMN3OFrEyNPTYHvfD/pubchart?oid=1182070057&amp;format=interactive')">Valor</button>
-            <button class="botao" onclick="abrirJanela('https://docs.google.com/spreadsheets/d/e/2PACX-1vRwLhUU91HJTLP2jwfLkJ1sD8lrhpkVwy8Ea8hEYOx4VCDU5BamiCk0FEawL8gEMN3OFrEyNPTYHvfD/pubchart?oid=391302009&amp;format=interactive')">Classificação</button>
-            <!-- Adicione os outros botões aqui -->
-        </div>
+        <div class="container">
+            <h1># Gestão de Desempenho # Relatório de Ações de Segurança RJ</h1>
+            </div>
 
-        <div class="conteudo-principal">
-            <div id="graficos"></div>
+            <div class="conteudo-principal" id="graficos">
+                <!-- Os gráficos serão adicionados automaticamente aqui -->
+            </div>
             
             <div class="texto">
                 <h2>Coleta dos Dados</h2>
@@ -149,42 +137,31 @@
     </div>
 
     <script>
-        var graficosAtivos = [];
+        var column_chart_mapping = {
+            "Data": "https://docs.google.com/spreadsheets/d/e/2PACX-1vRwLhUU91HJTLP2jwfLkJ1sD8lrhpkVwy8Ea8hEYOx4VCDU5BamiCk0FEawL8gEMN3OFrEyNPTYHvfD/pubchart?oid=500388460&amp;format=interactive",
+            "Mês": "https://docs.google.com/spreadsheets/d/e/2PACX-1vRwLhUU91HJTLP2jwfLkJ1sD8lrhpkVwy8Ea8hEYOx4VCDU5BamiCk0FEawL8gEMN3OFrEyNPTYHvfD/pubchart?oid=1643534116&format=interactive",
+            "Loja": "https://docs.google.com/spreadsheets/d/e/2PACX-1vRwLhUU91HJTLP2jwfLkJ1sD8lrhpkVwy8Ea8hEYOx4VCDU5BamiCk0FEawL8gEMN3OFrEyNPTYHvfD/pubchart?oid=693678060&format=interactive",
+            "Turno": "https://docs.google.com/spreadsheets/d/e/2PACX-1vRwLhUU91HJTLP2jwfLkJ1sD8lrhpkVwy8Ea8hEYOx4VCDU5BamiCk0FEawL8gEMN3OFrEyNPTYHvfD/pubchart?oid=599875144&format=interactive",
+            "Vigilante": "https://docs.google.com/spreadsheets/d/e/2PACX-1vRwLhUU91HJTLP2jwfLkJ1sD8lrhpkVwy8Ea8hEYOx4VCDU5BamiCk0FEawL8gEMN3OFrEyNPTYHvfD/pubchart?oid=1836405538&format=interactive",
+            "Fiscal": "https://docs.google.com/spreadsheets/d/e/2PACX-1vRwLhUU91HJTLP2jwfLkJ1sD8lrhpkVwy8Ea8hEYOx4VCDU5BamiCk0FEawL8gEMN3OFrEyNPTYHvfD/pubchart?oid=391302009&format=interactive",
+            "Setor": "https://docs.google.com/spreadsheets/d/e/2PACX-1vRwLhUU91HJTLP2jwfLkJ1sD8lrhpkVwy8Ea8hEYOx4VCDU5BamiCk0FEawL8gEMN3OFrEyNPTYHvfD/pubchart?oid=391302009&format=interactive",
+            "Valor": "https://docs.google.com/spreadsheets/d/e/2PACX-1vRwLhUU91HJTLP2jwfLkJ1sD8lrhpkVwy8Ea8hEYOx4VCDU5BamiCk0FEawL8gEMN3OFrEyNPTYHvfD/pubchart?oid=391302009&format=interactive",
+            "Classificação": "https://docs.google.com/spreadsheets/d/e/2PACX-1vRwLhUU91HJTLP2jwfLkJ1sD8lrhpkVwy8Ea8hEYOx4VCDU5BamiCk0FEawL8gEMN3OFrEyNPTYHvfD/pubchart?oid=391302009&format=interactive",
+        };
 
-        function toggleGrafico(url) {
-            var index = graficosAtivos.indexOf(url);
-            if (index === -1) {
-                if (graficosAtivos.length < 3) {
-                    graficosAtivos.push(url);
-                } else {
-                    alert("Você só pode selecionar até três gráficos!");
-                    return;
-                }
-            } else {
-                graficosAtivos.splice(index, 1);
-            }
-
-            atualizarGraficos();
-        }
-
-        function abrirJanela(url) {
-            window.open(url, "_blank", "width=800,height=600");
-        }
-
-        function atualizarGraficos() {
+        window.onload = function() {
             var container = document.getElementById("graficos");
-            container.innerHTML = "";
 
-            graficosAtivos.forEach(function(url) {
+            for (var column in column_chart_mapping) {
                 var iframe = document.createElement("iframe");
-                iframe.src = url;
+                iframe.src = column_chart_mapping[column];
                 iframe.width = "100%";
-                iframe.height = "400";
-                iframe.frameBorder = "0";
+                iframe.height = "600";
+                iframe.frameBorder = "10";
                 iframe.scrolling = "no";
                 container.appendChild(iframe);
-            });
-        }
+            }
+        };
     </script>
 </body>
 </html>
