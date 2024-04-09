@@ -12,60 +12,38 @@
             font-family: Arial, sans-serif;
         }
 
-        #sidebar {
+        .mobile-filter-menu {
             position: fixed;
             top: 0;
             left: 0;
-            height: 100%;
-            width: 200px;
+            width: 100%;
             background-color: #111;
-            padding-top: 15px;
-            transition: width 0.5s;
             z-index: 999;
+            display: none;
         }
 
-        #sidebar.collapsed {
-            width: 60px;
-        }
-
-        #sidebar ul {
+        .mobile-filter-menu ul {
             padding-left: 0;
             margin-left: 0;
+            list-style-type: none;
         }
 
-        #sidebar ul li {
-            list-style-type: none;
+        .mobile-filter-menu ul li {
             margin: 0;
             padding: 0;
         }
 
-        #sidebar ul li a {
+        .mobile-filter-menu ul li a {
             display: block;
-            padding: 10px 15px;
+            padding: 15px;
             text-decoration: none;
             color: #fff;
             border-bottom: 1px solid #888;
             transition: background-color 0.3s;
         }
 
-        #sidebar ul li a:hover {
+        .mobile-filter-menu ul li a:hover {
             background-color: #333;
-        }
-
-        #logo {
-            width: 100px;
-            height: auto;
-            margin: 20px;
-            animation: destacarLogo 3s infinite alternate;
-        }
-
-        @keyframes destacarLogo {
-            0% {
-                transform: scale(1);
-            }
-            100% {
-                transform: scale(1.2);
-            }
         }
 
         .container {
@@ -76,97 +54,41 @@
             border-radius: 16px;
             box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
             text-align: left;
-            margin-left: 200px; /* adjust based on sidebar width */
-            transition: margin-left 0.5s;
+            margin-top: 60px; /* Ajuste para deixar espaço para o menu */
         }
 
-        #sidebar.collapsed + .container {
-            margin-left: 60px; /* adjust based on sidebar width */
-        }
-
-        .link {
-            margin-bottom: 10px;
-            padding: 15px 0;
-            font-size: 16px;
-            background-color: #4CAF50;
-            color: white;
+        .filtro-mobile-btn {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            background-color: #111;
+            color: #fff;
             border: none;
+            padding: 10px 20px;
             border-radius: 8px;
             cursor: pointer;
-            transition: background-color 0.3s;
-            text-align: center;
-            display: block;
-            text-decoration: none;
-            text-align: center;
-            width: fit-content;
-            margin: 10px auto;
+            z-index: 1000;
         }
 
-        .link:hover {
-            background-color: #45a049;
-        }
-
-        .conteudo-principal {
-            text-align: center;
-        }
-
-        .texto {
-            margin-top: 20px;
-            text-align: justify;
-        }
-
-        iframe {
-            width: 100%;
-            height: 400px;
-            margin-bottom: 20px;
-        }
-
-        .rodape {
-            text-align: left;
-        }
-
-        @media screen and (max-width: 768px) {
-            .botao {
-                flex-basis: calc(50% - 10px);
-            }
-        }
-
-        @media screen and (max-width: 480px) {
-            .botao {
-                flex-basis: calc(100% - 10px);
-            }
-        }
-
-        /* Estilos CSS para os submenus */
-        .sub-menu-content {
-            display: none;
-        }
-        .visible {
-            display: block;
+        .filtro-mobile-btn:hover {
+            background-color: #333;
         }
     </style>
 </head>
 <body>
-    <div id="sidebar">
-        <img id="logo" src="https://img.freepik.com/vetores-premium/gire-o-icone-do-smartphone-no-fundo-branco-simbolo-de-rotacao-do-dispositivo-ilustracao-em-vetor-linha_476325-19.jpg" alt="Logo">
+    <button class="filtro-mobile-btn" id="filtroMobileBtn">Filtro</button>
+
+    <div class="mobile-filter-menu" id="mobileFilterMenu">
         <ul>
-            <li><a href="https://www.nagumo.com.br/">Site Nagumo</a></li>
-            <li><a href="https://www.youtube.com/c/SupermercadosNagumo">Canal do Youtube</a></li>
-            <li><a href="https://www.instagram.com/supermercados_nagumo?igsh=MXFvb3NkanphYmtwOQ==">Instagram</a></li>
-            <li class="menu-item sub-menu">
-                <a href="#" id="gestao-riscos">Gestão de Riscos</a>
-                <ul class="sub-menu-content">
-                    <li><a href="https://docs.google.com/spreadsheets/d/e/2PACX-1vRwLhUU91HJTLP2jwfLkJ1sD8lrhpkVwy8Ea8hEYOx4VCDU5BamiCk0FEawL8gEMN3OFrEyNPTYHvfD/pubchart?oid=500388460&amp;format=interactive" target="_blank">Data</a></li>
-                    <li><a href="https://docs.google.com/spreadsheets/d/e/2PACX-1vRwLhUU91HJTLP2jwfLkJ1sD8lrhpkVwy8Ea8hEYOx4VCDU5BamiCk0FEawL8gEMN3OFrEyNPTYHvfD/pubchart?oid=1460629283&format=interactive" target="_blank">Mês</a></li>
-                    <li><a href="https://docs.google.com/spreadsheets/d/e/2PACX-1vRwLhUU91HJTLP2jwfLkJ1sD8lrhpkVwy8Ea8hEYOx4VCDU5BamiCk0FEawL8gEMN3OFrEyNPTYHvfD/pubchart?oid=1643534116&format=interactive" target="_blank">Loja</a></li>
-                    <li><a href="https://docs.google.com/spreadsheets/d/e/2PACX-1vRwLhUU91HJTLP2jwfLkJ1sD8lrhpkVwy8Ea8hEYOx4VCDU5BamiCk0FEawL8gEMN3OFrEyNPTYHvfD/pubchart?oid=393890253&format=interactive" target="_blank">Turno</a></li>
-                    <li><a href="https://docs.google.com/spreadsheets/d/e/2PACX-1vRwLhUU91HJTLP2jwfLkJ1sD8lrhpkVwy8Ea8hEYOx4VCDU5BamiCk0FEawL8gEMN3OFrEyNPTYHvfD/pubchart?oid=693678060&format=interactive" target="_blank">Vigilante</a></li>
-                    <li><a href="https://docs.google.com/spreadsheets/d/e/2PACX-1vRwLhUU91HJTLP2jwfLkJ1sD8lrhpkVwy8Ea8hEYOx4VCDU5BamiCk0FEawL8gEMN3OFrEyNPTYHvfD/pubchart?oid=599875144&format=interactive" target="_blank">Fiscal</a></li>
-                    <li><a href="https://docs.google.com/spreadsheets/d/e/2PACX-1vRwLhUU91HJTLP2jwfLkJ1sD8lrhpkVwy8Ea8hEYOx4VCDU5BamiCk0FEawL8gEMN3OFrEyNPTYHvfD/pubchart?oid=1836405538&format=interactive" target="_blank">Setor</a></li>
-                    <li><a href="https://docs.google.com/spreadsheets/d/e/2PACX-1vRwLhUU91HJTLP2jwfLkJ1sD8lrhpkVwy8Ea8hEYOx4VCDU5BamiCk0FEawL8gEMN3OFrEyNPTYHvfD/pubchart?oid=1182070057&format=interactive" target="_blank">Valor</a></li>
-                    <li><a href="https://docs.google.com/spreadsheets/d/e/2PACX-1vRwLhUU91HJTLP2jwfLkJ1sD8lrhpkVwy8Ea8hEYOx4VCDU5BamiCk0FEawL8gEMN3OFrEyNPTYHvfD/pubchart?oid=391302009&format=interactive" target="_blank">Classificação</a></li>
-                </ul>
-            </li>
+            <li><a href="#">Data</a></li>
+            <li><a href="#">Mês</a></li>
+            <li><a href="#">Loja</a></li>
+            <li><a href="#">Turno</a></li>
+            <li><a href="#">Vigilante</a></li>
+            <li><a href="#">Fiscal</a></li>
+            <li><a href="#">Setor</a></li>
+            <li><a href="#">Valor</a></li>
+            <li><a href="#">Classificação</a></li>
         </ul>
     </div>
     
@@ -203,10 +125,11 @@
     </div>
 
     <script>
-        // JavaScript aqui
-        document.getElementById('gestao-riscos').addEventListener('click', function() {
-            var subMenu = document.querySelector('.sub-menu-content');
-            subMenu.classList.toggle('visible');
+        const filtroMobileBtn = document.getElementById('filtroMobileBtn');
+        const mobileFilterMenu = document.getElementById('mobileFilterMenu');
+
+        filtroMobileBtn.addEventListener('click', () => {
+            mobileFilterMenu.style.display = mobileFilterMenu.style.display === 'none' ? 'block' : 'none';
         });
     </script>
 </body>
