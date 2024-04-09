@@ -73,6 +73,12 @@
         .filtro-mobile-btn:hover {
             background-color: #333;
         }
+
+        .grafico-iframe {
+            width: 100%;
+            height: 500px;
+            border: none;
+        }
     </style>
 </head>
 <body>
@@ -80,15 +86,15 @@
 
     <div class="mobile-filter-menu" id="mobileFilterMenu">
         <ul>
-            <li><a href="https://docs.google.com/spreadsheets/d/e/2PACX-1vRwLhUU91HJTLP2jwfLkJ1sD8lrhpkVwy8Ea8hEYOx4VCDU5BamiCk0FEawL8gEMN3OFrEyNPTYHvfD/pubchart?oid=500388460&amp;format=interactive" target="_blank">Data</a></li>
-                    <li><a href="https://docs.google.com/spreadsheets/d/e/2PACX-1vRwLhUU91HJTLP2jwfLkJ1sD8lrhpkVwy8Ea8hEYOx4VCDU5BamiCk0FEawL8gEMN3OFrEyNPTYHvfD/pubchart?oid=1460629283&format=interactive" target="_blank">Mês</a></li>
-                    <li><a href="https://docs.google.com/spreadsheets/d/e/2PACX-1vRwLhUU91HJTLP2jwfLkJ1sD8lrhpkVwy8Ea8hEYOx4VCDU5BamiCk0FEawL8gEMN3OFrEyNPTYHvfD/pubchart?oid=1643534116&format=interactive" target="_blank">Loja</a></li>
-                    <li><a href="https://docs.google.com/spreadsheets/d/e/2PACX-1vRwLhUU91HJTLP2jwfLkJ1sD8lrhpkVwy8Ea8hEYOx4VCDU5BamiCk0FEawL8gEMN3OFrEyNPTYHvfD/pubchart?oid=393890253&format=interactive" target="_blank">Turno</a></li>
-                    <li><a href="https://docs.google.com/spreadsheets/d/e/2PACX-1vRwLhUU91HJTLP2jwfLkJ1sD8lrhpkVwy8Ea8hEYOx4VCDU5BamiCk0FEawL8gEMN3OFrEyNPTYHvfD/pubchart?oid=693678060&format=interactive" target="_blank">Vigilante</a></li>
-                    <li><a href="https://docs.google.com/spreadsheets/d/e/2PACX-1vRwLhUU91HJTLP2jwfLkJ1sD8lrhpkVwy8Ea8hEYOx4VCDU5BamiCk0FEawL8gEMN3OFrEyNPTYHvfD/pubchart?oid=599875144&format=interactive" target="_blank">Fiscal</a></li>
-                    <li><a href="https://docs.google.com/spreadsheets/d/e/2PACX-1vRwLhUU91HJTLP2jwfLkJ1sD8lrhpkVwy8Ea8hEYOx4VCDU5BamiCk0FEawL8gEMN3OFrEyNPTYHvfD/pubchart?oid=1836405538&format=interactive" target="_blank">Setor</a></li>
-                    <li><a href="https://docs.google.com/spreadsheets/d/e/2PACX-1vRwLhUU91HJTLP2jwfLkJ1sD8lrhpkVwy8Ea8hEYOx4VCDU5BamiCk0FEawL8gEMN3OFrEyNPTYHvfD/pubchart?oid=1182070057&format=interactive" target="_blank">Valor</a></li>
-                    <li><a href="https://docs.google.com/spreadsheets/d/e/2PACX-1vRwLhUU91HJTLP2jwfLkJ1sD8lrhpkVwy8Ea8hEYOx4VCDU5BamiCk0FEawL8gEMN3OFrEyNPTYHvfD/pubchart?oid=391302009&format=interactive" target="_blank">Classificação</a></li>
+            <li><a href="https://docs.google.com/spreadsheets/d/e/2PACX-1vRwLhUU91HJTLP2jwfLkJ1sD8lrhpkVwy8Ea8hEYOx4VCDU5BamiCk0FEawL8gEMN3OFrEyNPTYHvfD/pubchart?oid=500388460&amp;format=interactive" target="graficos">Data</a></li>
+            <li><a href="https://docs.google.com/spreadsheets/d/e/2PACX-1vRwLhUU91HJTLP2jwfLkJ1sD8lrhpkVwy8Ea8hEYOx4VCDU5BamiCk0FEawL8gEMN3OFrEyNPTYHvfD/pubchart?oid=1460629283&format=interactive" target="graficos">Mês</a></li>
+            <li><a href="https://docs.google.com/spreadsheets/d/e/2PACX-1vRwLhUU91HJTLP2jwfLkJ1sD8lrhpkVwy8Ea8hEYOx4VCDU5BamiCk0FEawL8gEMN3OFrEyNPTYHvfD/pubchart?oid=1643534116&format=interactive" target="graficos">Loja</a></li>
+            <li><a href="https://docs.google.com/spreadsheets/d/e/2PACX-1vRwLhUU91HJTLP2jwfLkJ1sD8lrhpkVwy8Ea8hEYOx4VCDU5BamiCk0FEawL8gEMN3OFrEyNPTYHvfD/pubchart?oid=393890253&format=interactive" target="graficos">Turno</a></li>
+            <li><a href="https://docs.google.com/spreadsheets/d/e/2PACX-1vRwLhUU91HJTLP2jwfLkJ1sD8lrhpkVwy8Ea8hEYOx4VCDU5BamiCk0FEawL8gEMN3OFrEyNPTYHvfD/pubchart?oid=693678060&format=interactive" target="graficos">Vigilante</a></li>
+            <li><a href="https://docs.google.com/spreadsheets/d/e/2PACX-1vRwLhUU91HJTLP2jwfLkJ1sD8lrhpkVwy8Ea8hEYOx4VCDU5BamiCk0FEawL8gEMN3OFrEyNPTYHvfD/pubchart?oid=599875144&format=interactive" target="graficos">Fiscal</a></li>
+            <li><a href="https://docs.google.com/spreadsheets/d/e/2PACX-1vRwLhUU91HJTLP2jwfLkJ1sD8lrhpkVwy8Ea8hEYOx4VCDU5BamiCk0FEawL8gEMN3OFrEyNPTYHvfD/pubchart?oid=1836405538&format=interactive" target="graficos">Setor</a></li>
+            <li><a href="https://docs.google.com/spreadsheets/d/e/2PACX-1vRwLhUU91HJTLP2jwfLkJ1sD8lrhpkVwy8Ea8hEYOx4VCDU5BamiCk0FEawL8gEMN3OFrEyNPTYHvfD/pubchart?oid=1182070057&format=interactive" target="graficos">Valor</a></li>
+            <li><a href="https://docs.google.com/spreadsheets/d/e/2PACX-1vRwLhUU91HJTLP2jwfLkJ1sD8lrhpkVwy8Ea8hEYOx4VCDU5BamiCk0FEawL8gEMN3OFrEyNPTYHvfD/pubchart?oid=391302009&format=interactive" target="graficos">Classificação</a></li>
         </ul>
     </div>
     
@@ -108,6 +114,9 @@
             <p><strong>A.T.F (Atitude Típica de Furto):</strong> Onde o cliente, seja com intenção ou no costume de utilizar bolsa ecológica, coloca todos os produtos em seu interior, seja dentro da bolsa no interior do carrinho de compras, seja na bolsa pendurada em seu braço ou pela utilização de carrinhos de compras particulares, onde este, quando intencionado a praticar furto, deixa a loja por entre os caixas ou até mesmo pela entrada principal, causando prejuízo enorme à empresa. Desta forma, a prática vem sendo monitorada pelos seguranças, fiscais e a frente de loja.</p>
         </div>
         
+        <!-- Div para incorporar os gráficos -->
+        <div id="graficos" class="conteudo-principal"></div>
+
         <!-- Div para incorporar o formulário do Google -->
         <div id="google-form">
             <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSdJahlGovT2paYj0OK4mRBiLDmsuuvPQUpHC7xfwDMnyYNm6w/viewform?embedded=true" width="100%" height="747" frameborder="0" marginheight="0" marginwidth="0">Carregando…</iframe>
@@ -127,10 +136,16 @@
     <script>
         const filtroMobileBtn = document.getElementById('filtroMobileBtn');
         const mobileFilterMenu = document.getElementById('mobileFilterMenu');
+        const graficosContainer = document.getElementById('graficos');
 
         filtroMobileBtn.addEventListener('click', () => {
             mobileFilterMenu.style.display = mobileFilterMenu.style.display === 'none' ? 'block' : 'none';
         });
+
+        // Função para carregar gráficos dentro do iframe
+        function carregarGrafico(url) {
+            graficosContainer.innerHTML = `<iframe src="${url}" class="grafico-iframe"></iframe>`;
+        }
     </script>
 </body>
 </html>
