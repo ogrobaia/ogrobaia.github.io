@@ -136,6 +136,14 @@
                 flex-basis: calc(100% - 10px);
             }
         }
+
+        /* Estilos CSS para os submenus */
+        .sub-menu-content {
+            display: none;
+        }
+        .visible {
+            display: block;
+        }
     </style>
 </head>
 <body>
@@ -146,17 +154,17 @@
             <li><a href="https://www.youtube.com/c/SupermercadosNagumo">Canal do Youtube</a></li>
             <li><a href="https://www.instagram.com/supermercados_nagumo?igsh=MXFvb3NkanphYmtwOQ==">Instagram</a></li>
             <li class="menu-item sub-menu">
-                <a href="#">Gestão de Riscos</a>
+                <a href="#" id="gestao-riscos">Gestão de Riscos</a>
                 <ul class="sub-menu-content">
-                    <li><a href="https://docs.google.com/spreadsheets/d/e/2PACX-1vRwLhUU91HJTLP2jwfLkJ1sD8lrhpkVwy8Ea8hEYOx4VCDU5BamiCk0FEawL8gEMN3OFrEyNPTYHvfD/pubchart?oid=500388460&amp;format=interactive">Data</a></li>
-                    <li><a href="https://docs.google.com/spreadsheets/d/e/2PACX-1vRwLhUU91HJTLP2jwfLkJ1sD8lrhpkVwy8Ea8hEYOx4VCDU5BamiCk0FEawL8gEMN3OFrEyNPTYHvfD/pubchart?oid=1460629283&format=interactive">Mês</a></li>
-                    <li><a href="https://docs.google.com/spreadsheets/d/e/2PACX-1vRwLhUU91HJTLP2jwfLkJ1sD8lrhpkVwy8Ea8hEYOx4VCDU5BamiCk0FEawL8gEMN3OFrEyNPTYHvfD/pubchart?oid=1643534116&format=interactive">Loja</a></li>
-                    <li><a href="https://docs.google.com/spreadsheets/d/e/2PACX-1vRwLhUU91HJTLP2jwfLkJ1sD8lrhpkVwy8Ea8hEYOx4VCDU5BamiCk0FEawL8gEMN3OFrEyNPTYHvfD/pubchart?oid=393890253&format=interactive">Turno</a></li>
-                    <li><a href="https://docs.google.com/spreadsheets/d/e/2PACX-1vRwLhUU91HJTLP2jwfLkJ1sD8lrhpkVwy8Ea8hEYOx4VCDU5BamiCk0FEawL8gEMN3OFrEyNPTYHvfD/pubchart?oid=693678060&format=interactive">Vigilante</a></li>
-                    <li><a href="https://docs.google.com/spreadsheets/d/e/2PACX-1vRwLhUU91HJTLP2jwfLkJ1sD8lrhpkVwy8Ea8hEYOx4VCDU5BamiCk0FEawL8gEMN3OFrEyNPTYHvfD/pubchart?oid=599875144&format=interactive">Fiscal</a></li>
-                    <li><a href="https://docs.google.com/spreadsheets/d/e/2PACX-1vRwLhUU91HJTLP2jwfLkJ1sD8lrhpkVwy8Ea8hEYOx4VCDU5BamiCk0FEawL8gEMN3OFrEyNPTYHvfD/pubchart?oid=1836405538&format=interactive">Setor</a></li>
-                    <li><a href="https://docs.google.com/spreadsheets/d/e/2PACX-1vRwLhUU91HJTLP2jwfLkJ1sD8lrhpkVwy8Ea8hEYOx4VCDU5BamiCk0FEawL8gEMN3OFrEyNPTYHvfD/pubchart?oid=1182070057&format=interactive">Valor</a></li>
-                    <li><a href="https://docs.google.com/spreadsheets/d/e/2PACX-1vRwLhUU91HJTLP2jwfLkJ1sD8lrhpkVwy8Ea8hEYOx4VCDU5BamiCk0FEawL8gEMN3OFrEyNPTYHvfD/pubchart?oid=391302009&format=interactive">Classificação</a></li>
+                    <li><a href="https://docs.google.com/spreadsheets/d/e/2PACX-1vRwLhUU91HJTLP2jwfLkJ1sD8lrhpkVwy8Ea8hEYOx4VCDU5BamiCk0FEawL8gEMN3OFrEyNPTYHvfD/pubchart?oid=500388460&amp;format=interactive" target="_blank">Data</a></li>
+                    <li><a href="https://docs.google.com/spreadsheets/d/e/2PACX-1vRwLhUU91HJTLP2jwfLkJ1sD8lrhpkVwy8Ea8hEYOx4VCDU5BamiCk0FEawL8gEMN3OFrEyNPTYHvfD/pubchart?oid=1460629283&format=interactive" target="_blank">Mês</a></li>
+                    <li><a href="https://docs.google.com/spreadsheets/d/e/2PACX-1vRwLhUU91HJTLP2jwfLkJ1sD8lrhpkVwy8Ea8hEYOx4VCDU5BamiCk0FEawL8gEMN3OFrEyNPTYHvfD/pubchart?oid=1643534116&format=interactive" target="_blank">Loja</a></li>
+                    <li><a href="https://docs.google.com/spreadsheets/d/e/2PACX-1vRwLhUU91HJTLP2jwfLkJ1sD8lrhpkVwy8Ea8hEYOx4VCDU5BamiCk0FEawL8gEMN3OFrEyNPTYHvfD/pubchart?oid=393890253&format=interactive" target="_blank">Turno</a></li>
+                    <li><a href="https://docs.google.com/spreadsheets/d/e/2PACX-1vRwLhUU91HJTLP2jwfLkJ1sD8lrhpkVwy8Ea8hEYOx4VCDU5BamiCk0FEawL8gEMN3OFrEyNPTYHvfD/pubchart?oid=693678060&format=interactive" target="_blank">Vigilante</a></li>
+                    <li><a href="https://docs.google.com/spreadsheets/d/e/2PACX-1vRwLhUU91HJTLP2jwfLkJ1sD8lrhpkVwy8Ea8hEYOx4VCDU5BamiCk0FEawL8gEMN3OFrEyNPTYHvfD/pubchart?oid=599875144&format=interactive" target="_blank">Fiscal</a></li>
+                    <li><a href="https://docs.google.com/spreadsheets/d/e/2PACX-1vRwLhUU91HJTLP2jwfLkJ1sD8lrhpkVwy8Ea8hEYOx4VCDU5BamiCk0FEawL8gEMN3OFrEyNPTYHvfD/pubchart?oid=1836405538&format=interactive" target="_blank">Setor</a></li>
+                    <li><a href="https://docs.google.com/spreadsheets/d/e/2PACX-1vRwLhUU91HJTLP2jwfLkJ1sD8lrhpkVwy8Ea8hEYOx4VCDU5BamiCk0FEawL8gEMN3OFrEyNPTYHvfD/pubchart?oid=1182070057&format=interactive" target="_blank">Valor</a></li>
+                    <li><a href="https://docs.google.com/spreadsheets/d/e/2PACX-1vRwLhUU91HJTLP2jwfLkJ1sD8lrhpkVwy8Ea8hEYOx4VCDU5BamiCk0FEawL8gEMN3OFrEyNPTYHvfD/pubchart?oid=391302009&format=interactive" target="_blank">Classificação</a></li>
                 </ul>
             </li>
         </ul>
@@ -195,132 +203,10 @@
     </div>
 
     <script>
-        var column_chart_mapping = {
-            "Data": "https://docs.google.com/spreadsheets/d/e/2PACX-1vRwLhUU91HJTLP2jwfLkJ1sD8lrhpkVwy8Ea8hEYOx4VCDU5BamiCk0FEawL8gEMN3OFrEyNPTYHvfD/pubchart?oid=500388460&amp;format=interactive",
-            "Mês": "https://docs.google.com/spreadsheets/d/e/2PACX-1vRwLhUU91HJTLP2jwfLkJ1sD8lrhpkVwy8Ea8hEYOx4VCDU5BamiCk0FEawL8gEMN3OFrEyNPTYHvfD/pubchart?oid=1460629283&format=interactive",
-            "Loja": "https://docs.google.com/spreadsheets/d/e/2PACX-1vRwLhUU91HJTLP2jwfLkJ1sD8lrhpkVwy8Ea8hEYOx4VCDU5BamiCk0FEawL8gEMN3OFrEyNPTYHvfD/pubchart?oid=1643534116&format=interactive",
-            "Turno": "https://docs.google.com/spreadsheets/d/e/2PACX-1vRwLhUU91HJTLP2jwfLkJ1sD8lrhpkVwy8Ea8hEYOx4VCDU5BamiCk0FEawL8gEMN3OFrEyNPTYHvfD/pubchart?oid=393890253&format=interactive",
-            "Vigilante": "https://docs.google.com/spreadsheets/d/e/2PACX-1vRwLhUU91HJTLP2jwfLkJ1sD8lrhpkVwy8Ea8hEYOx4VCDU5BamiCk0FEawL8gEMN3OFrEyNPTYHvfD/pubchart?oid=693678060&format=interactive",
-            "Fiscal": "https://docs.google.com/spreadsheets/d/e/2PACX-1vRwLhUU91HJTLP2jwfLkJ1sD8lrhpkVwy8Ea8hEYOx4VCDU5BamiCk0FEawL8gEMN3OFrEyNPTYHvfD/pubchart?oid=599875144&format=interactive",
-            "Setor": "https://docs.google.com/spreadsheets/d/e/2PACX-1vRwLhUU91HJTLP2jwfLkJ1sD8lrhpkVwy8Ea8hEYOx4VCDU5BamiCk0FEawL8gEMN3OFrEyNPTYHvfD/pubchart?oid=1836405538&format=interactive",
-            "Valor": "https://docs.google.com/spreadsheets/d/e/2PACX-1vRwLhUU91HJTLP2jwfLkJ1sD8lrhpkVwy8Ea8hEYOx4VCDU5BamiCk0FEawL8gEMN3OFrEyNPTYHvfD/pubchart?oid=1182070057&format=interactive",
-            "Classificação": "https://docs.google.com/spreadsheets/d/e/2PACX-1vRwLhUU91HJTLP2jwfLkJ1sD8lrhpkVwy8Ea8hEYOx4VCDU5BamiCk0FEawL8gEMN3OFrEyNPTYHvfD/pubchart?oid=391302009&format=interactive",
-        };
-
-        window.onload = function() {
-            var container = document.getElementById("graficos");
-
-            for (var column in column_chart_mapping) {
-                var iframe = document.createElement("iframe");
-                iframe.src = column_chart_mapping[column];
-                iframe.width = "100%";
-                iframe.height = "600";
-                iframe.frameBorder = "10";
-                iframe.scrolling = "no";
-                container.appendChild(iframe);
-            }
-        };
-
-        const ANIMATION_DURATION = 300;
-
-        const SIDEBAR_EL = document.getElementById("sidebar");
-
-        const SUB_MENU_ELS = document.querySelectorAll(
-          ".menu > ul > .menu-item.sub-menu"
-        );
-
-        const FIRST_SUB_MENUS_BTN = document.querySelectorAll(
-          ".menu > ul > .menu-item.sub-menu > a"
-        );
-
-        const INNER_SUB_MENUS_BTN = document.querySelectorAll(
-          ".menu > ul > .menu-item.sub-menu .menu-item.sub-menu > a"
-        );
-
-        class PopperObject {
-          instance = null;
-          reference = null;
-          popperTarget = null;
-
-          constructor(reference, popperTarget) {
-            this.init(reference, popperTarget);
-          }
-
-          init(reference, popperTarget) {
-            this.reference = reference;
-            this.popperTarget = popperTarget;
-            this.instance = Popper.createPopper(this.reference, this.popperTarget, {
-              placement: "right",
-              strategy: "fixed",
-              resize: true,
-              modifiers: [
-                {
-                  name: "computeStyles",
-                  options: {
-                    adaptive: false
-                  }
-                },
-                {
-                  name: "flip",
-                  options: {
-                    fallbackPlacements: ["left", "right"]
-                  }
-                }
-              ]
-            });
-
-            document.addEventListener(
-              "click",
-              (e) => this.clicker(e, this.popperTarget, this.reference),
-              false
-            );
-          }
-
-          destroy() {
-            this.instance.destroy();
-            this.instance = null;
-          }
-
-          clicker(event, popperTarget, reference) {
-            if (
-              !popperTarget.contains(event.target) &&
-              !reference.contains(event.target)
-            ) {
-              this.instance.destroy();
-            }
-          }
-        }
-
-        function toggleSidebar() {
-          SIDEBAR_EL.classList.toggle("collapsed");
-        }
-
-        document
-          .getElementById("sidebarCollapse")
-          .addEventListener("click", toggleSidebar);
-
-        const poppers = [];
-
-        const attachPopper = (reference, popper) => {
-          poppers.push(new PopperObject(reference, popper));
-        };
-
-        const handleClick = (e, element) => {
-          e.preventDefault();
-          const submenu = element.nextElementSibling;
-
-          if (submenu) {
-            submenu.classList.toggle("visible");
-            attachPopper(element, submenu);
-          }
-        };
-
-        FIRST_SUB_MENUS_BTN.forEach((btn) => {
-          btn.addEventListener("click", (e) => handleClick(e, btn));
-        });
-
-        INNER_SUB_MENUS_BTN.forEach((btn) => {
-          btn.addEventListener("click", (e) => handleClick(e, btn));
+        // JavaScript aqui
+        document.getElementById('gestao-riscos').addEventListener('click', function() {
+            var subMenu = document.querySelector('.sub-menu-content');
+            subMenu.classList.toggle('visible');
         });
     </script>
 </body>
