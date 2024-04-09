@@ -12,6 +12,46 @@
             font-family: Arial, sans-serif;
         }
 
+        #sidebar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            height: 100%;
+            width: 200px;
+            background-color: #111;
+            padding-top: 15px;
+            transition: width 0.5s;
+            z-index: 999;
+        }
+
+        #sidebar.collapsed {
+            width: 60px;
+        }
+
+        #sidebar ul {
+            padding-left: 0;
+            margin-left: 0;
+        }
+
+        #sidebar ul li {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        #sidebar ul li a {
+            display: block;
+            padding: 10px 15px;
+            text-decoration: none;
+            color: #fff;
+            border-bottom: 1px solid #888;
+            transition: background-color 0.3s;
+        }
+
+        #sidebar ul li a:hover {
+            background-color: #333;
+        }
+
         #logo {
             width: 100px;
             height: auto;
@@ -36,6 +76,12 @@
             border-radius: 16px;
             box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
             text-align: left;
+            margin-left: 200px; /* adjust based on sidebar width */
+            transition: margin-left 0.5s;
+        }
+
+        #sidebar.collapsed + .container {
+            margin-left: 60px; /* adjust based on sidebar width */
         }
 
         .link {
@@ -93,46 +139,44 @@
     </style>
 </head>
 <body>
-    <img id="logo" src="https://img.freepik.com/vetores-premium/gire-o-icone-do-smartphone-no-fundo-branco-simbolo-de-rotacao-do-dispositivo-ilustracao-em-vetor-linha_476325-19.jpg" alt="Logo">
+    <div id="sidebar">
+        <img id="logo" src="https://img.freepik.com/vetores-premium/gire-o-icone-do-smartphone-no-fundo-branco-simbolo-de-rotacao-do-dispositivo-ilustracao-em-vetor-linha_476325-19.jpg" alt="Logo">
+        <ul>
+            <li><a href="https://www.nagumo.com.br/">Site Nagumo</a></li>
+            <li><a href="https://www.youtube.com/c/SupermercadosNagumo">Canal do Youtube</a></li>
+            <li><a href="https://www.instagram.com/supermercados_nagumo?igsh=MXFvb3NkanphYmtwOQ==">Instagram</a></li>
+        </ul>
+    </div>
     
     <div class="container">
-        <div class="links-superiores">
-            <a href="https://www.nagumo.com.br/">Site Nagumo</a>
-            <a href="https://www.youtube.com/c/SupermercadosNagumo">Canal do Youtube</a>
-            <a href="https://www.instagram.com/supermercados_nagumo?igsh=MXFvb3NkanphYmtwOQ==">Instagram</a>
+        <h1># Gestão de Desempenho # Relatório de Ações de Segurança RJ</h1>
+
+        <div class="conteudo-principal" id="graficos">
+            <!-- Os gráficos serão adicionados automaticamente aqui -->
+        </div>
+        
+        <div class="texto">
+            <h2>Coleta dos Dados</h2>
+            <p>Utilizando-se de siglas já pré-determinadas para cada ação cometida através de intervenção do agente ou observação das atitudes do elemento a quem se dirige, foram adotadas as seguintes práticas:</p>
+            <p><strong>F.F (Furto Frustrado):</strong> Onde através da ação do agente, na postura ou observando o elemento, seja ele já conhecido por práticas anteriores ou através de abandono da rés furtiva, dá-se a ação de furto frustrado, por abandono ou casos parecidos.</p>
+            <p><strong>F.C (Furto Consumado):</strong> Onde o elemento subtrai o objeto, deixa o estabelecimento e por ação do agente é abordado diretamente.</p>
+            <p><strong>C.A.P (Consumo Acompanhado Pago):</strong> Onde o cliente degusta de diversos tipos de produtos, sendo observado durante toda a sua permanência no interior da loja, para que não abandone o produto deixando de pagar. Vale salientar que tal prática é costumeira e pode vir a causar grande prejuízo à empresa.</p>
+            <p><strong>A.T.F (Atitude Típica de Furto):</strong> Onde o cliente, seja com intenção ou no costume de utilizar bolsa ecológica, coloca todos os produtos em seu interior, seja dentro da bolsa no interior do carrinho de compras, seja na bolsa pendurada em seu braço ou pela utilização de carrinhos de compras particulares, onde este, quando intencionado a praticar furto, deixa a loja por entre os caixas ou até mesmo pela entrada principal, causando prejuízo enorme à empresa. Desta forma, a prática vem sendo monitorada pelos seguranças, fiscais e a frente de loja.</p>
+        </div>
+        
+        <!-- Div para incorporar o formulário do Google -->
+        <div id="google-form">
+            <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSdJahlGovT2paYj0OK4mRBiLDmsuuvPQUpHC7xfwDMnyYNm6w/viewform?embedded=true" width="100%" height="747" frameborder="0" marginheight="0" marginwidth="0">Carregando…</iframe>
         </div>
 
-        <div class="container">
-            <h1># Gestão de Desempenho # Relatório de Ações de Segurança RJ</h1>
-            </div>
-
-            <div class="conteudo-principal" id="graficos">
-                <!-- Os gráficos serão adicionados automaticamente aqui -->
-            </div>
-            
-            <div class="texto">
-                <h2>Coleta dos Dados</h2>
-                <p>Utilizando-se de siglas já pré-determinadas para cada ação cometida através de intervenção do agente ou observação das atitudes do elemento a quem se dirige, foram adotadas as seguintes práticas:</p>
-                <p><strong>F.F (Furto Frustrado):</strong> Onde através da ação do agente, na postura ou observando o elemento, seja ele já conhecido por práticas anteriores ou através de abandono da rés furtiva, dá-se a ação de furto frustrado, por abandono ou casos parecidos.</p>
-                <p><strong>F.C (Furto Consumado):</strong> Onde o elemento subtrai o objeto, deixa o estabelecimento e por ação do agente é abordado diretamente.</p>
-                <p><strong>C.A.P (Consumo Acompanhado Pago):</strong> Onde o cliente degusta de diversos tipos de produtos, sendo observado durante toda a sua permanência no interior da loja, para que não abandone o produto deixando de pagar. Vale salientar que tal prática é costumeira e pode vir a causar grande prejuízo à empresa.</p>
-                <p><strong>A.T.F (Atitude Típica de Furto):</strong> Onde o cliente, seja com intenção ou no costume de utilizar bolsa ecológica, coloca todos os produtos em seu interior, seja dentro da bolsa no interior do carrinho de compras, seja na bolsa pendurada em seu braço ou pela utilização de carrinhos de compras particulares, onde este, quando intencionado a praticar furto, deixa a loja por entre os caixas ou até mesmo pela entrada principal, causando prejuízo enorme à empresa. Desta forma, a prática vem sendo monitorada pelos seguranças, fiscais e a frente de loja.</p>
-            </div>
-            
-            <!-- Div para incorporar o formulário do Google -->
-            <div id="google-form">
-                <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSdJahlGovT2paYj0OK4mRBiLDmsuuvPQUpHC7xfwDMnyYNm6w/viewform?embedded=true" width="100%" height="747" frameborder="0" marginheight="0" marginwidth="0">Carregando…</iframe>
-            </div>
-
-            <div class="rodape">
-                <p><strong>Staff</strong></p>
-                <p><strong>Supervisor Regional:</strong> Claudio</p>
-                <p><strong>Supervisor Perdas:</strong> Emerson Carriero</p>
-                <p><strong>Gerente Loja 36:</strong> Miranda</p>
-                <p><strong>Gerente Loja 53:</strong> Henrique</p>
-                <p><strong>Gestor de Perdas:</strong> Daniel</p>
-                <!-- Informações sobre a equipe aqui -->
-            </div>
+        <div class="rodape">
+            <p><strong>Staff</strong></p>
+            <p><strong>Supervisor Regional:</strong> Claudio</p>
+            <p><strong>Supervisor Perdas:</strong> Emerson Carriero</p>
+            <p><strong>Gerente Loja 36:</strong> Miranda</p>
+            <p><strong>Gerente Loja 53:</strong> Henrique</p>
+            <p><strong>Gestor de Perdas:</strong> Daniel</p>
+            <!-- Informações sobre a equipe aqui -->
         </div>
     </div>
 
@@ -162,6 +206,108 @@
                 container.appendChild(iframe);
             }
         };
+
+        const ANIMATION_DURATION = 300;
+
+        const SIDEBAR_EL = document.getElementById("sidebar");
+
+        const SUB_MENU_ELS = document.querySelectorAll(
+          ".menu > ul > .menu-item.sub-menu"
+        );
+
+        const FIRST_SUB_MENUS_BTN = document.querySelectorAll(
+          ".menu > ul > .menu-item.sub-menu > a"
+        );
+
+        const INNER_SUB_MENUS_BTN = document.querySelectorAll(
+          ".menu > ul > .menu-item.sub-menu .menu-item.sub-menu > a"
+        );
+
+        class PopperObject {
+          instance = null;
+          reference = null;
+          popperTarget = null;
+
+          constructor(reference, popperTarget) {
+            this.init(reference, popperTarget);
+          }
+
+          init(reference, popperTarget) {
+            this.reference = reference;
+            this.popperTarget = popperTarget;
+            this.instance = Popper.createPopper(this.reference, this.popperTarget, {
+              placement: "right",
+              strategy: "fixed",
+              resize: true,
+              modifiers: [
+                {
+                  name: "computeStyles",
+                  options: {
+                    adaptive: false
+                  }
+                },
+                {
+                  name: "flip",
+                  options: {
+                    fallbackPlacements: ["left", "right"]
+                  }
+                }
+              ]
+            });
+
+            document.addEventListener(
+              "click",
+              (e) => this.clicker(e, this.popperTarget, this.reference),
+              false
+            );
+          }
+
+          destroy() {
+            this.instance.destroy();
+            this.instance = null;
+          }
+
+          clicker(event, popperTarget, reference) {
+            if (
+              !popperTarget.contains(event.target) &&
+              !reference.contains(event.target)
+            ) {
+              this.instance.destroy();
+            }
+          }
+        }
+
+        function toggleSidebar() {
+          SIDEBAR_EL.classList.toggle("collapsed");
+        }
+
+        document
+          .getElementById("sidebarCollapse")
+          .addEventListener("click", toggleSidebar);
+
+        const poppers = [];
+
+        const attachPopper = (reference, popper) => {
+          poppers.push(new PopperObject(reference, popper));
+        };
+
+        const handleClick = (e, element) => {
+          e.preventDefault();
+          const submenu = element.nextElementSibling;
+
+          if (submenu) {
+            submenu.classList.toggle("visible");
+            attachPopper(element, submenu);
+          }
+        };
+
+        FIRST_SUB_MENUS_BTN.forEach((btn) => {
+          btn.addEventListener("click", (e) => handleClick(e, btn));
+        });
+
+        INNER_SUB_MENUS_BTN.forEach((btn) => {
+          btn.addEventListener("click", (e) => handleClick(e, btn));
+        });
     </script>
 </body>
 </html>
