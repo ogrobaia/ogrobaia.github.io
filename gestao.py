@@ -17,6 +17,7 @@ column_chart_mapping = {
     "Setor": "https://docs.google.com/spreadsheets/d/e/2PACX-1vRwLhUU91HJTLP2jwfLkJ1sD8lrhpkVwy8Ea8hEYOx4VCDU5BamiCk0FEawL8gEMN3OFrEyNPTYHvfD/pubchart?oid=391302009&format=interactive",
     "Valor": "https://docs.google.com/spreadsheets/d/e/2PACX-1vRwLhUU91HJTLP2jwfLkJ1sD8lrhpkVwy8Ea8hEYOx4VCDU5BamiCk0FEawL8gEMN3OFrEyNPTYHvfD/pubchart?oid=391302009&format=interactive",
     "Classificação": "https://docs.google.com/spreadsheets/d/e/2PACX-1vRwLhUU91HJTLP2jwfLkJ1sD8lrhpkVwy8Ea8hEYOx4VCDU5BamiCk0FEawL8gEMN3OFrEyNPTYHvfD/pubchart?oid=391302009&format=interactive",
+    "Perda2024": "https://docs.google.com/spreadsheets/d/e/2PACX-1vTOB_dRsW9zmewOw4eBR385CVCDQUDOpxBzNq9TfcZl9TyCEXfvU8FHIKrR71p5dSkLC5Rgkgm2uf0c/pubchart?oid=983004117&amp;format=interactive",
     "Perda": "https://docs.google.com/spreadsheets/d/e/2PACX-1vTOB_dRsW9zmewOw4eBR385CVCDQUDOpxBzNq9TfcZl9TyCEXfvU8FHIKrR71p5dSkLC5Rgkgm2uf0c/pubchart?oid=1461239993&amp;format=interactive",
     "Acompanhados": "https://docs.google.com/spreadsheets/d/e/2PACX-1vTOB_dRsW9zmewOw4eBR385CVCDQUDOpxBzNq9TfcZl9TyCEXfvU8FHIKrR71p5dSkLC5Rgkgm2uf0c/pubchart?oid=460858368&amp;format=interactive",
 }
