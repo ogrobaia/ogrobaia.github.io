@@ -20,6 +20,7 @@ column_chart_mapping = {
     "Perda2024": "https://docs.google.com/spreadsheets/d/e/2PACX-1vTOB_dRsW9zmewOw4eBR385CVCDQUDOpxBzNq9TfcZl9TyCEXfvU8FHIKrR71p5dSkLC5Rgkgm2uf0c/pubchart?oid=983004117&amp;format=interactive",
     "Perda": "https://docs.google.com/spreadsheets/d/e/2PACX-1vTOB_dRsW9zmewOw4eBR385CVCDQUDOpxBzNq9TfcZl9TyCEXfvU8FHIKrR71p5dSkLC5Rgkgm2uf0c/pubchart?oid=1461239993&amp;format=interactive",
     "Acompanhados": "https://docs.google.com/spreadsheets/d/e/2PACX-1vTOB_dRsW9zmewOw4eBR385CVCDQUDOpxBzNq9TfcZl9TyCEXfvU8FHIKrR71p5dSkLC5Rgkgm2uf0c/pubchart?oid=460858368&amp;format=interactive",
+    "Recuperado": "https://docs.google.com/spreadsheets/d/e/2PACX-1vTOB_dRsW9zmewOw4eBR385CVCDQUDOpxBzNq9TfcZl9TyCEXfvU8FHIKrR71p5dSkLC5Rgkgm2uf0c/pubchart?oid=696171317&format=interactive",
 }
 
 
