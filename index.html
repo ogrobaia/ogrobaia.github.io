@@ -9,13 +9,22 @@
             background-color: #f0f7ff;
             margin: 0;
             padding: 0;
-            font-family: Arial, sans-serif;
+            font-family: 'Roboto', sans-serif;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        header {
+            text-align: center;
+            padding: 20px;
+            background-color: #007BFF;
+            color: white;
         }
 
         #logo {
             width: 100px;
             height: auto;
-            margin: 20px;
+            margin-bottom: 10px;
             animation: destacarLogo 3s infinite alternate;
         }
 
@@ -29,71 +38,104 @@
         }
 
         .container {
-            max-width: 90%;
-            margin: 0 auto;
+            max-width: 1200px;
+            margin: 20px auto;
             padding: 20px;
             background-color: #ffffff;
-            border-radius: 16px;
-            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .links-superiores {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin-bottom: 20px;
+            flex-wrap: wrap;
         }
 
         .link {
-            margin-bottom: 10px;
-            padding: 15px 0;
+            padding: 10px 20px;
             font-size: 16px;
-            background-color: #4CAF50;
+            background-color: #007BFF;
             color: white;
             border: none;
             border-radius: 8px;
             cursor: pointer;
             transition: background-color 0.3s;
-            text-align: center;
-            display: block;
             text-decoration: none;
-            width: fit-content;
-            margin: 10px auto;
         }
 
         .link:hover {
-            background-color: #45a049;
+            background-color: #0056b3;
+        }
+
+        h1 {
+            text-align: center;
+            color: #007BFF;
+            margin-bottom: 30px;
+            font-size: 28px;
         }
 
         .conteudo-principal {
-            text-align: center;
-        }
-
-        .texto {
-            margin-top: 20px;
-            text-align: justify;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
         }
 
         iframe {
             width: 100%;
             height: 400px;
-            margin-bottom: 20px;
             border: none;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .texto {
+            margin-top: 40px;
+            text-align: justify;
+        }
+
+        .texto h2 {
+            color: #007BFF;
+            font-size: 24px;
+            margin-bottom: 10px;
         }
 
         .rodape {
-            text-align: left;
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px solid #ddd;
+            text-align: center;
+            font-size: 14px;
+            color: #777;
         }
 
-        @media screen and (max-width: 768px) {
-            .botao {
-                flex-basis: calc(50% - 10px);
+        /* Media Queries para responsividade */
+        @media (max-width: 768px) {
+            .conteudo-principal {
+                grid-template-columns: 1fr;
             }
-        }
 
-        @media screen and (max-width: 480px) {
-            .botao {
-                flex-basis: calc(100% - 10px);
+            .links-superiores {
+                flex-direction: column;
+                gap: 10px;
+            }
+
+            .link {
+                width: 100%;
+                text-align: center;
             }
         }
     </style>
 </head>
 <body>
-    <img id="logo" src="https://img.freepik.com/vetores-premium/gire-o-icone-do-smartphone-no-fundo-branco-simbolo-de-rotacao-do-dispositivo-ilustracao-em-vetor-linha_476325-19.jpg" alt="Logo">
-    
+
+    <header>
+        <img id="logo" src="https://img.freepik.com/vetores-premium/gire-o-icone-do-smartphone-no-fundo-branco-simbolo-de-rotacao-do-dispositivo-ilustracao-em-vetor-linha_476325-19.jpg" alt="Logo">
+        <h1>Gestão de Desempenho - Relatório de Ações de Segurança RJ</h1>
+    </header>
+
     <div class="container">
         <div class="links-superiores">
             <a class="link" href="https://www.nagumo.com.br/">Site Nagumo</a>
@@ -101,12 +143,10 @@
             <a class="link" href="https://www.instagram.com/supermercados_nagumo?igsh=MXFvb3NkanphYmtwOQ==">Instagram</a>
         </div>
 
-        <h1># Gestão de Desempenho # Relatório de Ações de Segurança RJ</h1>
-
         <div class="conteudo-principal" id="graficos">
             <!-- Os gráficos serão adicionados automaticamente aqui -->
         </div>
-        
+
         <div class="texto">
             <h2>Coleta dos Dados</h2>
             <p>Utilizando-se de siglas já pré-determinadas para cada ação cometida através de intervenção do agente ou observação das atitudes do elemento a quem se dirige, foram adotadas as seguintes práticas:</p>
@@ -115,9 +155,9 @@
             <p><strong>C.A.P (Consumo Acompanhado Pago):</strong> Onde o cliente degusta de diversos tipos de produtos, sendo observado durante toda a sua permanência no interior da loja, para que não abandone o produto deixando de pagar. Vale salientar que tal prática é costumeira e pode vir a causar grande prejuízo à empresa.</p>
             <p><strong>A.T.F (Atitude Típica de Furto):</strong> Onde o cliente, seja com intenção ou no costume de utilizar bolsa ecológica, coloca todos os produtos em seu interior, seja dentro da bolsa no interior do carrinho de compras, seja na bolsa pendurada em seu braço ou pela utilização de carrinhos de compras particulares, onde este, quando intencionado a praticar furto, deixa a loja por entre os caixas ou até mesmo pela entrada principal, causando prejuízo enorme à empresa. Desta forma, a prática vem sendo monitorada pelos seguranças, fiscais e a frente de loja.</p>
         </div>
-        
+
         <!-- Div para incorporar o formulário do Google -->
-        <div id="google-form">
+        <div id="google-form" class="conteudo-principal">
             <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSdJahlGovT2paYj0OK4mRBiLDmsuuvPQUpHC7xfwDMnyYNm6w/viewform?embedded=true">Carregando…</iframe>
         </div>
 
@@ -128,7 +168,6 @@
             <p><strong>Gerente Loja 36:</strong> Miranda</p>
             <p><strong>Gerente Loja 53:</strong> Henrique</p>
             <p><strong>Gestor de Perdas:</strong> Daniel</p>
-            <!-- Informações sobre a equipe aqui -->
         </div>
     </div>
 
@@ -137,9 +176,9 @@
         "Data": "https://docs.google.com/spreadsheets/d/e/2PACX-1vRwLhUU91HJTLP2jwfLkJ1sD8lrhpkVwy8Ea8hEYOx4VCDU5BamiCk0FEawL8gEMN3OFrEyNPTYHvfD/pubchart?oid=500388460&format=interactive",
         "Mês": "https://docs.google.com/spreadsheets/d/e/2PACX-1vRwLhUU91HJTLP2jwfLkJ1sD8lrhpkVwy8Ea8hEYOx4VCDU5BamiCk0FEawL8gEMN3OFrEyNPTYHvfD/pubchart?oid=1460629283&format=interactive",
         "Loja": "https://docs.google.com/spreadsheets/d/e/2PACX-1vRwLhUU91HJTLP2jwfLkJ1sD8lrhpkVwy8Ea8hEYOx4VCDU5BamiCk0FEawL8gEMN3OFrEyNPTYHvfD/pubchart?oid=1643534116&format=interactive",
-        "Turno": "https://docs.google.com/spreadsheets/d/e/2PACX-1vRwLhUU91HJTLP2jwfLkJ1sD8lrhpkVwy8Ea8hEYOx4VCDU5BamiCk0FEawL8gEMN3OFrEyNPTYHvfD/pubchart?oid=393890253&format=interactive",
-        "Vigilante": "https://docs.google.com/spreadsheets/d/e/2PACX-1vRwLhUU91HJTLP2jwfLkJ1sD8lrhpkVwy8Ea8hEYOx4VCDU5BamiCk0FEawL8gEMN3OFrEyNPTYHvfD/pubchart?oid=693678060&format=interactive",
-        "Fiscal": "https://docs.google.com/spreadsheets/d/e/2PACX-1vRwLhUU91HJTLP2jwfLkJ1sD8lrhpkVwy8Ea8hEYOx4VCDU5BamiCk0FEawL8gEMN3OFrEyNPTYHvfD/pubchart?oid=1643534116&format=interactive",
+        "Turno": "https://docs.google.com/spreadsheets/d/e/2PACX-1vRwLhUU91HJTLP2jwfLkJ1sD8lrhpkVwy8Ea8hEYOx4VCDU5BamiCk0FEawL8gEMN3OFrEyNPTYHvfD/pubchart?oid=599875144&format=interactive",
+        "Vigilante": "https://docs.google.com/spreadsheets/d/e/2PACX-1vRwLhUU91HJTLP2jwfLkJ1sD8lrhpkVwy8Ea8hEYOx4VCDU5BamiCk0FEawL8gEMN3OFrEyNPTYHvfD/pubchart?oid=1836405538&format=interactive",
+        "Fiscal": "https://docs.google.com/spreadsheets/d/e/2PACX-1vRwLhUU91HJTLP2jwfLkJ1sD8lrhpkVwy8Ea8hEYOx4VCDU5BamiCk0FEawL8gEMN3OFrEyNPTYHvfD/pubchart?oid=391302009&format=interactive",
         "Setor": "https://docs.google.com/spreadsheets/d/e/2PACX-1vTOB_dRsW9zmewOw4eBR385CVCDQUDOpxBzNq9TfcZl9TyCEXfvU8FHIKrR71p5dSkLC5Rgkgm2uf0c/pubchart?oid=599875144&format=interactive",
         "Valor": "https://docs.google.com/spreadsheets/d/e/2PACX-1vTOB_dRsW9zmewOw4eBR385CVCDQUDOpxBzNq9TfcZl9TyCEXfvU8FHIKrR71p5dSkLC5Rgkgm2uf0c/pubchart?oid=391302009&format=interactive",
         "Classificação": "https://docs.google.com/spreadsheets/d/e/2PACX-1vTOB_dRsW9zmewOw4eBR385CVCDQUDOpxBzNq9TfcZl9TyCEXfvU8FHIKrR71p5dSkLC5Rgkgm2uf0c/pubchart?oid=460858368&format=interactive",
