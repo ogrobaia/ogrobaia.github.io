@@ -1,5 +1,9 @@
-**Gestão de Desempenho - Relatório de Ações de Segurança RJ
+**Gestão de Desempenho - Relatório de Ações de Segurança RJ**
+
+
 Descrição do Projeto
+
+
 Este projeto é uma aplicação web que exibe gráficos interativos e informações sobre ações de segurança em um ambiente de loja. Utiliza Flask como backend e HTML para o frontend. A aplicação permite selecionar e visualizar gráficos baseados em dados específicos.
 
 Estrutura do Projeto
