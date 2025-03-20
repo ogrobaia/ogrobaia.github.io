@@ -1,10 +1,8 @@
-from flask import Flask, render_template, request
+from flask import Flask, render_template, request, session, redirect
 import os
 
 app = Flask(__name__)
-
-# Pasta onde as imagens estão localizadas
-image_folder = "static"
+app.secret_key = "chave_secreta_segura"  # Necessário para usar session
 
 # Mapeamento de nomes de colunas para URLs dos gráficos
 column_chart_mapping = {
@@ -23,23 +21,31 @@ column_chart_mapping = {
 
 @app.route("/", methods=["GET", "POST"])
 def index():
-    selected_charts = []
+    if "selected_charts" not in session:
+        session["selected_charts"] = []
 
     if request.method == "POST":
-        selected_column = request.form["seletor"]
+        selected_column = request.form.get("seletor")
         if selected_column in column_chart_mapping:
             selected_chart = column_chart_mapping[selected_column]
-            if selected_chart not in selected_charts:
+            if selected_chart not in session["selected_charts"]:
                 # Limita a exibição a até 3 gráficos, removendo o mais antigo caso necessário
-                if len(selected_charts) >= 3:
-                    selected_charts.pop(0)
-                selected_charts.append(selected_chart)
+                if len(session["selected_charts"]) >= 3:
+                    session["selected_charts"].pop(0)
+                session["selected_charts"].append(selected_chart)
+                session.modified = True  # Indica que a sessão foi alterada
 
     return render_template(
         "index.html",
         column_chart_mapping=column_chart_mapping,
-        selected_charts=selected_charts,
+        selected_charts=session["selected_charts"],
     )
+
+@app.route("/clear", methods=["POST"])
+def clear():
+    session["selected_charts"] = []
+    session.modified = True
+    return redirect("/")
 
 if __name__ == "__main__":
     # Adiciona a opção de porta configurável por variável de ambiente
