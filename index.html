@@ -3,202 +3,110 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gestão de Desempenho - Relatório de Ações de Segurança RJ</title>
+    <title>Relatório de Ações de Segurança RJ</title>
     <style>
-        /* Variáveis de cor para facilitar a manutenção */
         :root {
-            --primary-color: #007BFF;
-            --primary-hover: #0056b3;
-            --background-color: #f0f7ff;
-            --container-bg: #ffffff;
+            --primary-color: #00274E;
+            --secondary-color: #FFA500;
             --text-color: #333;
-            --shadow-color: rgba(0, 0, 0, 0.1);
         }
-
         body {
-            background-color: var(--background-color);
+            font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
-            font-family: 'Roboto', sans-serif;
+            background-color: #f5f5f5;
             color: var(--text-color);
-            line-height: 1.6;
         }
-
         header {
-            text-align: center;
-            padding: 20px;
             background-color: var(--primary-color);
-            color: white;
+            padding: 10px;
+            text-align: center;
         }
-
-        #logo {
-            width: 200px;
-            height: auto;
-            margin-bottom: 10px;
-            animation: destacarLogo 3s infinite alternate;
+        header img {
+            max-width: 200px;
         }
-
-        @keyframes destacarLogo {
-            0% { transform: scale(1); }
-            100% { transform: scale(1.2); }
-        }
-
-        .container {
-            max-width: 1200px;
-            margin: 20px auto;
-            padding: 20px;
-            background-color: var(--container-bg);
-            border-radius: 8px;
-            box-shadow: 0 4px 8px var(--shadow-color);
-        }
-
-        .links-superiores {
+        nav {
             display: flex;
             justify-content: center;
-            gap: 15px;
-            margin-bottom: 20px;
-            flex-wrap: wrap;
+            background-color: var(--secondary-color);
+            padding: 10px;
         }
-
         .link {
-            padding: 10px 20px;
-            font-size: 16px;
-            background-color: var(--primary-color);
             color: white;
-            border: none;
-            border-radius: 8px;
-            cursor: pointer;
-            transition: background-color 0.3s;
             text-decoration: none;
+            padding: 10px 20px;
+            font-weight: bold;
         }
-
-        .link:hover { background-color: var(--primary-hover); }
-        .link:active { box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.2); }
-        .link.active { font-weight: bold; color: var(--primary-hover); }
-
-        h1 {
-            text-align: center;
-            color: var(--primary-color);
-            margin-bottom: 30px;
-            font-size: 28px;
+        .link.active {
+            text-decoration: underline;
         }
-
-        .conteudo-principal {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 20px;
+        .container {
+            padding: 20px;
+            max-width: 800px;
+            margin: auto;
         }
-
+        .grafico-container {
+            margin-top: 20px;
+        }
         iframe {
             width: 100%;
             height: 400px;
             border: none;
-            border-radius: 8px;
-            box-shadow: 0 2px 4px var(--shadow-color);
         }
-
-        .texto {
-            margin-top: 40px;
-            text-align: justify;
-        }
-
-        .texto p { margin-bottom: 15px; }
-
-        .texto h2 {
-            color: var(--primary-color);
-            font-size: 24px;
-            margin-bottom: 10px;
-        }
-
-        .rodape {
-            margin-top: 40px;
-            padding-top: 20px;
-            border-top: 1px solid #ddd;
-            text-align: center;
-            font-size: 14px;
-            color: #777;
-        }
-
         @media (max-width: 768px) {
-            .conteudo-principal {
-                grid-template-columns: 1fr;
-            }
-            .links-superiores {
-                flex-direction: column;
-                gap: 10px;
-            }
-            .link {
-                width: 100%;
-                text-align: center;
+            iframe {
+                height: 300px;
             }
         }
     </style>
 </head>
 <body>
-
     <header>
-        <img id="logo" src="https://institucional.nagumo.com.br/images/nagumo-2021.png" alt="Logo da Nagumo" loading="lazy">
-        <h1>Gestão de Desempenho - Relatório de Ações de Segurança RJ</h1>
+        <img id="logo" src="https://institucional.nagumo.com.br/images/nagumo-2021.png" 
+             alt="Logotipo do Supermercado Nagumo" loading="lazy">
     </header>
+    <nav>
+        <a class="link active" href="#" onclick="return false;">Relatório de Ações de Segurança RJ</a>
+    </nav>
+    <div class="container">
+        <h1>Relatório de Ações de Segurança RJ</h1>
+        <p>Confira abaixo os dados detalhados sobre as ações de segurança.</p>
+        <div id="graficos" class="grafico-container"></div>
+    </div>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const column_chart_mapping = {
+                "Ocorrências": "https://lookerstudio.google.com/embed/reporting/EXEMPLO1",
+                "Prevenção": "https://lookerstudio.google.com/embed/reporting/EXEMPLO2"
+            };
 
-    <main class="container" role="main">
-        <nav class="links-superiores" aria-label="Navegação principal">
-            <a class="link active" href="" aria-label="Relatório de Ações de Segurança RJ">Relatório de Ações de Segurança RJ</a>
-            <a class="link" href="https://docs.google.com/spreadsheets/d/19wrwA3RrZ5ih9BHa6776TNnDmlJxR7vnD_6WfnOLQ_k/export?format=pdf" aria-label="Baixar Gestão de Validades em PDF">Gestão de Validades - link download</a>
-            <a class="link" href="https://www.nagumo.com.br/" aria-label="Site da Nagumo">Site Nagumo</a>
-            <a class="link" href="https://www.youtube.com/c/SupermercadosNagumo" aria-label="Canal no YouTube da Nagumo">Canal do Youtube</a>
-            <a class="link" href="https://www.instagram.com/supermercados_nagumo?igsh=MXFvb3NkanphYmtwOQ==" aria-label="Perfil no Instagram da Nagumo">Instagram</a>
-        </nav>
+            const graficosDiv = document.getElementById("graficos");
+            
+            for (const [nome, link] of Object.entries(column_chart_mapping)) {
+                const div = document.createElement("div");
+                div.className = "grafico-container";
+                div.innerHTML = `<h2>${nome}</h2><iframe data-src="${link}" title="Gráfico ${nome}" loading="lazy"></iframe>`;
+                graficosDiv.appendChild(div);
+            }
 
-        <section class="conteudo-principal" id="graficos" aria-label="Seção de Gráficos">
-            <p class="descricao-graficos">Visualize abaixo os principais indicadores de segurança, organizados por data, loja, segurança e tipo de ocorrência. Clique em cada gráfico para ampliar e ver mais detalhes.</p>
-        </section>
-
-        <section class="texto" aria-labelledby="coleta-dados">
-            <h2 id="coleta-dados">Coleta dos Dados</h2>
-            <p>Para cada ação cometida, foram adotadas as seguintes práticas, usando siglas pré-determinadas:</p>
-            <p><strong>1. F.F (Furto Tentado):</strong> Ação frustrada onde o agente, por observação ou abandono da rés furtiva, impede o furto.</p>
-            <p><strong>2. F.C (Furto Recuperado):</strong> Onde o agente aborda o elemento após a subtração e saída do estabelecimento.</p>
-            <p><strong>3. C.A.P (Consumo Acompanhado Pago):</strong> Monitoramento de clientes que consomem produtos na loja para garantir o pagamento.</p>
-        </section>
-
-        <section id="google-form" class="conteudo-principal" aria-label="Formulário de Feedback">
-            <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSdJahlGovT2paYj0OK4mRBiLDmsuuvPQUpHC7xfwDMnyYNm6w/viewform?embedded=true" title="Formulário Google">Carregando…</iframe>
-        </section>
-
-   <script>
-    var column_chart_mapping = {
-        "Data do fato ?": "https://docs.google.com/spreadsheets/d/e/2PACX-1vSsvLY4iX339sxm8INvlUtRfMKs58S1Q8VEWKncGz9aztZ8n3NMJP14IonrXhR5yhM1XbllH6POKUB5/pubchart?oid=903930057&format=interactive",
-        "Loja": "https://docs.google.com/spreadsheets/d/e/2PACX-1vSsvLY4iX339sxm8INvlUtRfMKs58S1Q8VEWKncGz9aztZ8n3NMJP14IonrXhR5yhM1XbllH6POKUB5/pubchart?oid=1205414947&format=interactive",
-        "Segurança": "https://docs.google.com/spreadsheets/d/e/2PACX-1vSsvLY4iX339sxm8INvlUtRfMKs58S1Q8VEWKncGz9aztZ8n3NMJP14IonrXhR5yhM1XbllH6POKUB5/pubchart?oid=1500234806&format=interactive",
-        "Tipo de Ocorrência": "https://docs.google.com/spreadsheets/d/e/2PACX-1vSsvLY4iX339sxm8INvlUtRfMKs58S1Q8VEWKncGz9aztZ8n3NMJP14IonrXhR5yhM1XbllH6POKUB5/pubchart?oid=1835121208&format=interactive",
-        "Setor": "https://docs.google.com/spreadsheets/d/e/2PACX-1vSsvLY4iX339sxm8INvlUtRfMKs58S1Q8VEWKncGz9aztZ8n3NMJP14IonrXhR5yhM1XbllH6POKUB5/pubchart?oid=344571032&format=interactive",
-        "Perda2024": "https://docs.google.com/spreadsheets/d/e/2PACX-1vTOB_dRsW9zmewOw4eBR385CVCDQUDOpxBzNq9TfcZl9TyCEXfvU8FHIKrR71p5dSkLC5Rgkgm2uf0c/pubchart?oid=374117186&format=image",
-        "Perda": "https://docs.google.com/spreadsheets/d/e/2PACX-1vTOB_dRsW9zmewOw4eBR385CVCDQUDOpxBzNq9TfcZl9TyCEXfvU8FHIKrR71p5dSkLC5Rgkgm2uf0c/pubchart?oid=1461239993&format=image",
-        "Codigos": "https://docs.google.com/spreadsheets/d/e/2PACX-1vSsvLY4iX339sxm8INvlUtRfMKs58S1Q8VEWKncGz9aztZ8n3NMJP14IonrXhR5yhM1XbllH6POKUB5/pubchart?oid=1794182638&format=interactive",
-        "Recuperado": "https://docs.google.com/spreadsheets/d/e/2PACX-1vTOB_dRsW9zmewOw4eBR385CVCDQUDOpxBzNq9TfcZl9TyCEXfvU8FHIKrR71p5dSkLC5Rgkgm2uf0c/pubchart?oid=696171317&format=interactive",
-        "Recuperado2": "https://docs.google.com/spreadsheets/d/e/2PACX-1vSsvLY4iX339sxm8INvlUtRfMKs58S1Q8VEWKncGz9aztZ8n3NMJP14IonrXhR5yhM1XbllH6POKUB5/pubchart?oid=1256223449&format=interactive"
-    };
-
-    const graficosDiv = document.getElementById("graficos");
-        const observer = new IntersectionObserver((entries, observer) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    const iframe = entry.target;
+            if ('IntersectionObserver' in window) {
+                const observer = new IntersectionObserver((entries, observer) => {
+                    entries.forEach(entry => {
+                        if (entry.isIntersecting) {
+                            const iframe = entry.target;
+                            iframe.src = iframe.dataset.src;
+                            observer.unobserve(iframe);
+                        }
+                    });
+                }, { threshold: 0.1 });
+                
+                document.querySelectorAll("iframe[data-src]").forEach(iframe => observer.observe(iframe));
+            } else {
+                document.querySelectorAll("iframe[data-src]").forEach(iframe => {
                     iframe.src = iframe.dataset.src;
-                    observer.unobserve(iframe);
-                }
-            });
-        }, { threshold: 0.1 });
-
-        for (const [nome, link] of Object.entries(column_chart_mapping)) {
-            const iframe = document.createElement("iframe");
-            iframe.dataset.src = link;
-            iframe.title = `Gráfico ${nome}`;
-            iframe.loading = "lazy";
-            graficosDiv.appendChild(iframe);
-            observer.observe(iframe);
-        }
+                });
+            }
+        });
     </script>
 </body>
 </html>
